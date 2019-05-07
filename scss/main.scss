@@ -1,14 +1,43 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
 
 //mixin is like a function call
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      //"&:after" is equal to .overlay, css treat "&:after" like after body
+      &:after {
+        content: "";
+        position: absolute; //cover the entire body
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(
+          $primary-color,
+          $background-opacity
+        ); //rgba have opacity
+        z-index: -1;
+      }
+    }
+  }
+}
 * {
   box-sizing: border-box;
 }
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
