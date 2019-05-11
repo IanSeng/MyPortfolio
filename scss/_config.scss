@@ -4,7 +4,7 @@ $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $portrait-image: url(../img/profile.jpg);
 $portrait-imageSm: url(../img/profile-small.jpg);
-$background-opacity: 0.7;
+$background-opacity: 0;
 
 //mixin is like a function call
 @mixin easeOut {
@@ -14,9 +14,10 @@ $background-opacity: 0.7;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
       background-attachment: fixed;
       background-size: cover;
+      background-position: center;
 
       //"&:after" is equal to .overlay, css treat "&:after" like after body
       &:after {
