@@ -28,19 +28,31 @@
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
-  .menu-branding, .menu-nav {
+  .menu-branding, .menu-testing, .menu-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     float: left;
-    width: 50%;
+    width: 33.33%;
     height: 100vh;
     overflow: hidden; }
+  .menu-testing {
+    background: #444;
+    transform: translate3d(0, -100%, 0);
+    justify-content: flex-start;
+    transition: all 0.5s ease-out; }
+    .menu-testing.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-testing .portrait {
+      width: 300px;
+      height: 540px;
+      background: url(../img/ufo.png);
+      background-position: bottom; }
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #fff;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }

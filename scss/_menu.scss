@@ -49,21 +49,41 @@
   }
   //Styling for menu branding and nav
   &-branding,
+  &-testing,
   &-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     float: left;
-    width: 50%;
+    width: 33.33%;
     height: 100vh;
     overflow: hidden;
+  }
+  //Testing Side
+
+  &-testing {
+    background: $primary-color;
+    transform: translate3d(0, -100%, 0);
+    justify-content: flex-start;
+    @include easeOut;
+
+    &.show {
+      //Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+    .portrait {
+      width: 300px;
+      height: 540px;
+      background: $ufo-image;
+      background-position: bottom;
+    }
   }
   //Menu Side
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: #fff;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
