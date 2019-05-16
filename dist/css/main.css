@@ -28,7 +28,7 @@
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
-  .menu-branding, .menu-testing, .menu-nav {
+  .menu-index, .menu-about, .menu-work {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -37,21 +37,21 @@
     width: 33.33%;
     height: 100vh;
     overflow: hidden; }
-  .menu-testing {
-    transform: translate3d(0, 150%, 0);
+  .menu-index {
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.8s ease-out; }
+    .menu-index.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-about {
+    transform: translate3d(0, 100%, 0);
     justify-content: flex-start;
-    transition: all 0.8s ease-out; }
-    .menu-testing.show {
+    transition: all 1.1s ease-out; }
+    .menu-about.show {
       transform: translate3d(0, 0, 0); }
-  .menu-nav {
+  .menu-work {
     transform: translate3d(0, 100%, 0);
-    transition: all 0.8s ease-out; }
-    .menu-nav.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-branding {
-    transform: translate3d(0, 100%, 0);
-    transition: all 0.8s ease-out; }
-    .menu-branding.show {
+    transition: all 1.3s ease-out; }
+    .menu-work.show {
       transform: translate3d(0, 0, 0); }
 
 .nav-item:nth-child(1) {
