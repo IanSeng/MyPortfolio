@@ -6,27 +6,62 @@ var tlContact1 = new TimelineMax();
 var tlContact2 = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();
 
+//-------------typing ---------------------
+const texts = ["student", "developer", "gamer", "dreamer"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+  if (count === texts.length) {
+    count = 0;
+  } else if (count === 1) {
+    document.querySelector(".typing").style.color = "blue";
+  } else if (count === 2) {
+    document.querySelector(".typing").style.color = "red";
+  } else if (count === 3) {
+    document.querySelector(".typing").style.color = "purple";
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  console.log(index);
+  document.querySelector(".typing").textContent = letter;
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+  }
+  setTimeout(type, 400);
+})();
+
+function removeTyping(){
+    letter = currentText.slice(text.length, --index);
+    document.querySelector(".typing").textContent = letter;
+}
 //refer to https://stackoverflow.com/questions/37360616/how-to-create-a-side-menu-that-the-active-item-follow-the-page-content-locatio
 window.onscroll = function() {
   var navElement = document.querySelectorAll("a");
-  //Function to remove active 
+  //Function to remove active
   var removeActive = function(element) {
-    for (var i = navElement.length-1; i >= 0 ; --i) {
+    for (var i = navElement.length - 1; i >= 0; --i) {
       element[i].classList.remove("active");
     }
   };
   var previousElement = null;
-  for (var i = navElement.length-1; i >= 0 ; i--) {
-    //Get the element name 
+  for (var i = navElement.length - 1; i >= 0; i--) {
+    //Get the element name
     console.log(i);
-    var currentElement = document.getElementsByClassName(navElement[i].getAttribute("href").substring(1))[0];
+    var currentElement = document.getElementsByClassName(
+      navElement[i].getAttribute("href").substring(1)
+    )[0];
     var currentRefElementTop = currentElement.getBoundingClientRect().top;
     console.log(currentRefElementTop);
     if (currentRefElementTop <= 0) {
       //if the browser's top line haven't touched the second elemet
       previousElement = navElement[i];
       if (i == 0) {
-        //when it is at the last section 
+        //when it is at the last section
         removeActive(navElement);
         navElement[i].classList.add("active");
       }
@@ -84,8 +119,8 @@ tlAbout1.from(".about1", 0.5, { x: 200, opacity: 0 });
 tlProject2.from(".project2", 0.5, { x: -200, opacity: 0 });
 tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
 
-tlContact2.from(".contact2", 0.5, { x: -200, opacity: 0 });
-tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
+//tlContact2.from(".contact2", 0.5, { x: -200, opacity: 0 });
+//tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
 tlContact1.to(".innerCircle", 0.5, {
   boxShadow:
     "0px 0px 60px #3180B9, inset -5px 5px 15px #3180B9, inset -25px 8px 50px #FEFEF3, inset -80px 40px 50px #3180B9, inset -40px 80px 90px #3180B9, inset -500px 200px 70px #172140"
@@ -141,4 +176,3 @@ let scene6 = new ScrollMagic.Scene({
 function updatePercentage() {
   tlAbout2.progress();
 }
-
