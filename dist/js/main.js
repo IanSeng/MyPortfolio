@@ -5,6 +5,7 @@ var tlProject2 = new TimelineMax({ onUpdate: updatePercentage });
 var tlContact1 = new TimelineMax();
 var tlContact2 = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();
+var tlProject3 = new TimelineMax({ onUpdate: updatePercentage });
 
 //-------------typing ---------------------
 const texts = ["student", "developer", "gamer", "dreamer"];
@@ -88,7 +89,6 @@ function scrollToFunction(section) {
 
 //-----------------------------
 //tlAbout2.to(".sun", 2,{x:200, y:-250, width:100, height:100,scale:1});
-tlAbout2.to(".sun", 2, { x: 200, y: -50, width: 100, height: 100, scale: 1 });
 tlProject2.to(".sun", 2, {
   x: 0,
   y: -50,
@@ -97,36 +97,22 @@ tlProject2.to(".sun", 2, {
   height: 250,
   scale: 1
 });
-tlContact2.to(".sun", 2, {
-  x: -200,
-  y: -50,
-  width: 100,
-  height: 100,
-  scale: 1
-});
-tlContact2.to(".sun", 2, {
-  x: -70,
-  y: -50,
-  zIndex: -30,
-  width: 100,
-  height: 100,
-  scale: 1
-});
 
-tlAbout2.from(".about2", 0.5, { x: -200, opacity: 0 });
-tlAbout1.from(".about1", 0.5, { x: 200, opacity: 0 });
+
+
+tlAbout1.from("#about-header", 1, {x:-300, opacity: 0});
+tlAbout2.from("#myself2", 0.5, { x: 200, opacity: 0 });
+
 
 tlProject2.from(".project2", 0.5, { x: -200, opacity: 0 });
 tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
 
 //tlContact2.from(".contact2", 0.5, { x: -200, opacity: 0 });
 //tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
-tlContact1.to(".innerCircle", 0.5, {
-  boxShadow:
-    "0px 0px 60px #3180B9, inset -5px 5px 15px #3180B9, inset -25px 8px 50px #FEFEF3, inset -80px 40px 50px #3180B9, inset -40px 80px 90px #3180B9, inset -500px 200px 70px #172140"
-});
+tlContact2.from(".contact1", 2, { opacity: 0 });
 //tlAbout2.to(".sun", 2,{x:200, y:-250, scale:1});
-
+tlProject3.from("#lineimg", 2, { x: -100}).to("#sticky3amore", 2, { x: -2000},0);
+//to("#sticky3amore", 2, { x: -800},0);
 //-------------scene-----------------
 let scene1 = new ScrollMagic.Scene({
   triggerElement: ".sticky2"
@@ -171,6 +157,15 @@ let scene6 = new ScrollMagic.Scene({
 })
   .setPin(".sticky4")
   .setTween(tlContact2)
+  .addTo(controller);
+
+let scene7 = new ScrollMagic.Scene({
+  triggerElement: ".sticky3a",
+  triggerHook: "onLeave",
+  duration: "100%"
+})
+  .setPin(".sticky3a")
+  .setTween(tlProject3)
   .addTo(controller);
 
 function updatePercentage() {

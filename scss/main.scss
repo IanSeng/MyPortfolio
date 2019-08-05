@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Mono&display=swap");
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", monospace;
   background-color: black;
+  overflow-x: hidden;
+
   section {
     //padding: 3em;
     height: 100vh;
@@ -16,20 +18,31 @@ body {
   height: 130vh;
   .i {
     position: absolute;
+    font-weight: bold;
+    color: #312f2f;
     font-size: 25em;
     transform: translate(20%, -50%);
     text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
   }
   .n {
     position: absolute;
+    font-weight: bold;
+    color: #312f2f;
     font-size: 25em;
     transform: translate(380%, 80%);
     text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
+    z-index: 10;
   }
-  .l {
+
+  .innerl {
+    display: inline-block;
+    right: 0%;
+    transform: translate(30%, 0%);
     position: absolute;
+    font-weight: bold;
+    color: #312f2f;
     font-size: 25em;
-    transform: translate(80vw, -20%);
+
     text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
   }
   .innerline {
@@ -49,28 +62,31 @@ body {
     width: 25px;
     &.header {
       position: absolute;
+      font-weight: 900;
       font-size: 15em;
+      color: #d8d8d8;
       transform: translate(-650%, -50%) rotate(90deg);
-      text-shadow: 0px -30px rgba(49, 47, 47, 0.25),
-        0px -60px rgba(49, 47, 47, 0.25);
+      text-shadow: 0px -30px rgba(216, 216, 216, 0.55),
+        0px -60px rgba(216, 216, 216, 0.25);
     }
     &.myself {
       color: black;
       font-size: 2.5em;
+      font-family: "PT Sans", sans-serif;
       position: absolute;
-      transform: translate(100%, -50%);
+      transform: translate(100%, -45%);
       //border: 3px solid #73AD21;
       width: 300px;
     }
-    .typing{
+    .typing {
       position: relative;
-      color: #4CAF50;
+      color: #4caf50;
     }
 
     .typing::after {
       content: "";
       position: relative;
-     
+
       width: 1px;
       height: 5%;
       border-right: 2px solid black;
@@ -79,8 +95,11 @@ body {
 
     &.myself2 {
       padding-right: 5px;
+      text-align: justify;
+      font-family: "PT Sans", sans-serif;
       color: black;
-      font-size: 0.8em;
+      font-size: 1em;
+      padding-right: 50px;
       position: absolute;
       top: 0;
       right: 0;
@@ -89,9 +108,55 @@ body {
     }
   }
 }
+
+.sticky3a {
+  background: white;
+
+  &.lineimg {
+    position: relative;
+    top: 30%;
+    height: 300px;
+    width: 7000px;
+    transform: translateX(-80%) rotate(-1deg);
+    background: url(/dist/img/Grid1.png);
+    font-size: 15em;
+    z-index: 1;
+  }
+  &.more {
+    font-weight: 900;
+    font-size: 230px;
+    width: 3000px;
+    transform: translate(5%, -35%) rotate(-2deg);
+  }
+  .warning1{
+    position: absolute;
+    height: 50px;
+    width: 150vw;
+    transform: translate(-10%, 400%) rotate(20deg);
+    background-color: yellow;
+    z-index: 10;
+  }
+  .warning2{
+    position: absolute;
+    height: 70px;
+    width: 150vw;
+    transform: translate(-10%, 400%) rotate(-22deg);
+    background-color: yellow;
+    z-index: 10;
+  }
+  .warning3{
+    position: absolute;
+    height: 40px;
+    width: 150vw;
+    transform: translate(-10%, 20%) rotate(-33deg);
+    background-color: yellow;
+    z-index: 10;
+  }
+}
 .sticky4 {
   background: white;
   padding: 0;
+  overflow: hidden;
   .contact1 {
     position: absolute;
     font-size: 23vmax;
@@ -106,10 +171,10 @@ body {
 }
 
 @keyframes blink {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
@@ -118,27 +183,29 @@ body {
   position: absolute;
   overflow: hidden;
   background-color: transparent;
-  position: fixed;
+  //position: fixed;
   top: 10px;
   width: 100%;
   z-index: 10;
 
   a {
     float: right;
+    font-family: "PT Sans", sans-serif;
+    text-shadow: 0px 5px rgba(112, 112, 112, 0.67);
     display: block;
-    color: #f2f2f2;
+    color: #707070;
     text-align: center;
     padding: 0px 30px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
   }
   a:hover {
-    color: red;
+    color: yellow;
   }
 }
-.active {
+/*.active {
   background: silver;
-}
+}*/
 
 .project1 {
   position: absolute;
