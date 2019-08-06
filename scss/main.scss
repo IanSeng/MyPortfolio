@@ -109,47 +109,54 @@ body {
   }
 }
 
+
 .sticky3a {
   background: white;
-
+  
   &.lineimg {
-    position: relative;
+    position: absolute;
     top: 30%;
     height: 300px;
     width: 7000px;
     transform: translateX(-80%) rotate(-1deg);
     background: url(/dist/img/Grid1.png);
     font-size: 15em;
-    z-index: 1;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+
   }
   &.more {
+    position: relative;
     font-weight: 900;
     font-size: 230px;
-    width: 3000px;
-    transform: translate(5%, -35%) rotate(-2deg);
+    width: 5000px;
+    background: transparent;
+    transform: translate(5%, 45%) rotate(-2deg);
   }
-  .warning1{
+  .warning1 {
     position: absolute;
-    height: 50px;
+    height: 38px;
     width: 150vw;
-    transform: translate(-10%, 400%) rotate(20deg);
-    background-color: yellow;
-    z-index: 10;
+    transform: translate(-30%, 1300%) rotate(20deg);
+    background: url(/dist/img/smallWarning.png);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+   
   }
-  .warning2{
+  .warning2 {
     position: absolute;
     height: 70px;
     width: 150vw;
-    transform: translate(-10%, 400%) rotate(-22deg);
-    background-color: yellow;
-    z-index: 10;
+    transform: translate(-10%, 400%) rotate(-33deg);
+    background: url(/dist/img/largeWarning.png);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    z-index: 0;
   }
-  .warning3{
+  .warning3 {
     position: absolute;
-    height: 40px;
+    height: 50px;
     width: 150vw;
-    transform: translate(-10%, 20%) rotate(-33deg);
-    background-color: yellow;
+    transform: translate(-5%, 600%) rotate(-22deg);
+    background: url(/dist/img/mediumWarning.png);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
     z-index: 10;
   }
 }
@@ -157,6 +164,7 @@ body {
   background: white;
   padding: 0;
   overflow: hidden;
+  z-index: -1;
   .contact1 {
     position: absolute;
     font-size: 23vmax;

@@ -6,7 +6,7 @@ var tlContact1 = new TimelineMax();
 var tlContact2 = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();
 var tlProject3 = new TimelineMax({ onUpdate: updatePercentage });
-
+var rellax = new Rellax(".rellax"); 
 //-------------typing ---------------------
 const texts = ["student", "developer", "gamer", "dreamer"];
 let count = 0;
@@ -111,7 +111,7 @@ tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
 //tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
 tlContact2.from(".contact1", 2, { opacity: 0 });
 //tlAbout2.to(".sun", 2,{x:200, y:-250, scale:1});
-tlProject3.from("#lineimg", 2, { x: -100}).to("#sticky3amore", 2, { x: -2000},0);
+tlProject3.from("#lineimg", 1, { x: -1000}).to("#sticky3amore", 2, { x: -2000},0);
 //to("#sticky3amore", 2, { x: -800},0);
 //-------------scene-----------------
 let scene1 = new ScrollMagic.Scene({
