@@ -55,64 +55,79 @@ body {
     background: url(/dist/img/B4HkgO3.png);
   }
 }
+
 .sticky2 {
   background: white;
-  .about {
+  height: 110vh;
+
+  .about-container {
+    position: absolute;
+    width: 500px;
     height: 100vh;
-    width: 25px;
-    &.header {
+
+    .about-header {
+      /*background: url(/dist/img/warningLine.png);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
       position: absolute;
       font-weight: 900;
-      font-size: 15em;
+      font-size: 35vh;
       color: #d8d8d8;
-      transform: translate(-650%, -50%) rotate(90deg);
+      transform: translate(-43%, 60%) rotate(90deg);
       text-shadow: 0px -30px rgba(216, 216, 216, 0.55),
         0px -60px rgba(216, 216, 216, 0.25);
+      .aboutline {
+        background: url(/dist/img/warningLine.png);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
     }
-    &.myself {
-      color: black;
-      font-size: 2.5em;
-      font-family: "PT Sans", sans-serif;
-      position: absolute;
-      transform: translate(100%, -45%);
-      //border: 3px solid #73AD21;
-      width: 300px;
-    }
-    .typing {
-      position: relative;
-      color: #4caf50;
-    }
+  }
 
-    .typing::after {
-      content: "";
-      position: relative;
+  .about-myself {
+    color: black;
+    font-size: 2.5em;
+    font-family: "PT Sans", sans-serif;
+    position: absolute;
+    transform: translate(100%, -120%);
+    //border: 3px solid #73AD21;
+    width: 300px;
+  }
+  .typing {
+    position: relative;
+    color: #4caf50;
+  }
 
-      width: 1px;
-      height: 5%;
-      border-right: 2px solid black;
-      animation: blink 1s infinite ease;
-    }
+  .typing::after {
+    content: "";
+    position: relative;
 
-    &.myself2 {
-      padding-right: 5px;
-      text-align: justify;
-      font-family: "PT Sans", sans-serif;
-      color: black;
-      font-size: 1em;
-      padding-right: 50px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(0%, 80vh);
-      width: 200px;
-    }
+    width: 1px;
+    height: 5%;
+    border-right: 2px solid black;
+    animation: blink 1s infinite ease;
+  }
+
+  .about-myself2 {
+    position: absolute;
+    padding-right: 5px;
+    text-align: justify;
+    font-family: "PT Sans", sans-serif;
+    color: black;
+    font-size: 1em;
+    padding-right: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0%, 80vh);
+    width: 200px;
   }
 }
 
-
 .sticky3a {
   background: white;
-  
+
   &.lineimg {
     position: absolute;
     top: 30%;
@@ -122,7 +137,6 @@ body {
     background: url(/dist/img/Grid1.png);
     font-size: 15em;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-
   }
   &.more {
     position: relative;
@@ -139,7 +153,6 @@ body {
     transform: translate(-30%, 1300%) rotate(20deg);
     background: url(/dist/img/smallWarning.png);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-   
   }
   .warning2 {
     position: absolute;
@@ -159,6 +172,16 @@ body {
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
     z-index: 10;
   }
+  &.githubSign {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: url(/dist/img/githubWarning.png);
+    transform: rotate(-2deg);
+    right: 20%;
+    top: 60%;
+    animation: swing ease-in-out 1s infinite alternate;
+  }
 }
 .sticky4 {
   background: white;
@@ -175,6 +198,14 @@ body {
       0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2),
       0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
       0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
   }
 }
 

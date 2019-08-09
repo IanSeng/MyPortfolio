@@ -100,7 +100,7 @@ tlProject2.to(".sun", 2, {
 
 
 
-tlAbout1.from("#about-header", 1, {x:-300, opacity: 0});
+tlAbout1.from("#about-header", 1, {x:-600, opacity: 0});
 tlAbout2.from("#myself2", 0.5, { x: 200, opacity: 0 });
 
 
