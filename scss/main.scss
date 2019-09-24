@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Roboto+Mono&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -22,38 +22,59 @@ body {
     color: #312f2f;
     font-size: 25em;
     transform: translate(20%, -50%);
-    text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
+    text-shadow: 70px 0px rgba(49, 47, 47, 0.85),
+      140px 0px rgba(49, 47, 47, 0.79), 210px 0px rgba(49, 47, 47, 0.62),
+      280px 0px rgba(49, 47, 47, 0.43), 350px 0px rgba(49, 47, 47, 0.38),
+      420px 0px rgba(49, 47, 47, 0.3);
   }
   .n {
     position: absolute;
     font-weight: bold;
     color: #312f2f;
     font-size: 25em;
-    transform: translate(380%, 80%);
-    text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
+    transform: translate(350%, 80%);
+    text-shadow: 50px 0px rgba(49, 47, 47, 0.83), 100px 0px rgba(49, 47, 47, 0.81),
+      150px 0px rgba(49, 47, 47, 0.59), 200px 0px rgba(49, 47, 47, 0.47),
+      250px 0px rgba(49, 47, 47, 0.28), 300px 0px rgba(49, 47, 47, 0.32),
+      350px 0px rgba(49, 47, 47, 0.19), 400px 0px rgba(49, 47, 47, 0.14);
     z-index: 10;
   }
 
   .innerl {
     display: inline-block;
     right: 0%;
-    transform: translate(30%, 0%);
+    transform: translate(20%, 20%);
     position: absolute;
     font-weight: bold;
     color: #312f2f;
     font-size: 25em;
 
-    text-shadow: 20px 15px rgba(49, 47, 47, 0.25);
+    text-shadow: 0px -50px rgba(49, 47, 47, 0.77),
+      0px -110px rgba(49, 47, 47, 0.73), 0px -180px rgba(49, 47, 47, 0.51),
+      0px -270px rgba(49, 47, 47, 0.40), 0px -400px rgba(49, 47, 47, 0.22);
   }
-  .innerline {
+  .ianseng {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -90%);
-    width: 550px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 900;
+    font-size: 7em;
+    transform: translate(-10%, -60%);
+    width: 700px;
     height: 300px;
-    background: url(/dist/img/B4HkgO3.png);
+    text-shadow: -20px 30px 7px rgba(0, 0, 0, 0.16),
+    
   }
+  .a {
+    position: absolute;
+    font-weight: 900;
+    color: #F5D738;
+    font-size: 35em;
+    transform: translate(20%, 25%);
+    z-index: 10;
+  }
+
 }
 
 .sticky2 {
@@ -90,20 +111,19 @@ body {
     font-size: 2.5em;
     font-family: "PT Sans", sans-serif;
     position: absolute;
-    transform: translate(100%, -120%);
+    transform: translate(170%, -100%);
     //border: 3px solid #73AD21;
     width: 300px;
 
-    .canada:after{
-      content:"";
+    .canada:after {
+      content: "";
       text-decoration: underline;
     }
-   
+
     .canada:hover:after {
-      content:" and Malaysia";
+      content: " and Malaysia";
       opacity: 0.5;
     }
-
   }
   .typing {
     position: relative;
@@ -199,7 +219,7 @@ body {
   padding: 0;
   overflow: hidden;
   z-index: -1;
-  
+
   .contact1 {
     position: absolute;
     font-size: 23vmax;
@@ -211,25 +231,25 @@ body {
       0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
       0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
   }
-  .contactc{
+  .contactc {
     text-shadow: 0px -50px rgba(49, 47, 47, 0.55),
-    0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(224, 209, 19, 0.75),
-    0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35),
-    0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2),
-    0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
-    0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
+      0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(224, 209, 19, 0.75),
+      0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35),
+      0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2),
+      0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
+      0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
   }
 }
 
-.sticky4a{
+.sticky4a {
   background: transparent;
   padding: 0;
   overflow: hidden;
 
-  .speedSign1{
+  .speedSign1 {
     position: absolute;
-    height: 95%;
-    width: 95%;
+    height: 80%;
+    width: 80%;
     opacity: 0.32;
     transform: translate(-30%, 93%) rotate(79deg);
     background: url(/dist/img/triangleSign.png);
@@ -237,10 +257,10 @@ body {
     background-repeat: no-repeat;
     z-index: 4;
   }
-  .speedSign2{
+  .speedSign2 {
     position: absolute;
-    height: 95%;
-    width: 95%;
+    height: 80%;
+    width: 80%;
     opacity: 0.13;
     transform: translate(-30%, 95%) rotate(79deg);
     background: url(/dist/img/triangleSign.png);
@@ -248,31 +268,31 @@ body {
     background-repeat: no-repeat;
     z-index: 5;
   }
-  
-  .stopSign1{
+
+  .stopSign1 {
     position: absolute;
-    height: 115%;
-    width: 115%;
+    height: 100%;
+    width: 100%;
     opacity: 0.11;
-    transform: translate(-15%, 45%) rotate(41deg);
+    transform: translate(-15%, 55%) rotate(41deg);
     background: url(/dist/img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 3;
   }
-  .stopSign2{
+  .stopSign2 {
     position: absolute;
-    height: 115%;
-    width: 115%;
+    height: 100%;
+    width: 100%;
     opacity: 0.22;
-    transform: translate(-14%, 43%) rotate(41deg);
+    transform: translate(-14%, 53%) rotate(41deg);
     background: url(/dist/img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
   }
-    
-  .radioactiveSign{
+
+  .radioactiveSign {
     position: absolute;
     height: 45%;
     width: 45%;
@@ -282,8 +302,8 @@ body {
     background-repeat: no-repeat;
     z-index: -2;
   }
-  
-  .speedLimitSign{
+
+  .speedLimitSign {
     position: absolute;
     height: 60%;
     width: 60%;
@@ -293,8 +313,63 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
-  } 
-  .copyRight{
+  }
+
+  .igSign1 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    transform: translate(75%, 45%) rotate(0deg);
+    background: url(/dist/img/igNeon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+  }
+  .igSign2 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: 0.19;
+    transform: translate(75%, 38%) rotate(0deg);
+    background: url(/dist/img/igNeon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 4;
+  }
+  .igSign3 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: 0.19;
+    transform: translate(75%, 31%) rotate(0deg);
+    background: url(/dist/img/igNeon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+  }
+  .igSign4 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: 0.1;
+    transform: translate(75%, 24%) rotate(0deg);
+    background: url(/dist/img/igNeon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  .igSign5 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: 0.08;
+    transform: translate(75%, 17%) rotate(0deg);
+    background: url(/dist/img/igNeon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .copyRight {
     position: absolute;
     color: white;
     width: 200vw;
@@ -302,20 +377,24 @@ body {
     letter-spacing: 0px;
     transform: translateX(-6%);
     bottom: 2%;
-    text-shadow: 0px -3px 30px rgba(255, 255, 255, 1), 0px 3px 30px rgba(255, 255, 255, 1),
-    -2px -2px 30px rgba(255, 255, 255, 1),2px -2px 30px rgba(255, 255, 255, 1),
-    0px 5px 0px rgba(255, 255, 255, 0.38), 0px 7px 30px rgba(255, 255, 255, 0.38),
-    0px 10px 0px rgba(255, 255, 255, 0.27), 0px 12px 30px rgba(255, 255, 255, 0.27),
-    0px 15px 0px rgba(255, 255, 255, 0.21),0px 17px 30px rgba(255, 255, 255, 0.21),
-    0px 20px 0px rgba(255, 255, 255, 0.10),0px 22px 30px rgba(255, 255, 255, 0.21);
+    text-shadow: 0px -3px 30px rgba(255, 255, 255, 1),
+      0px 3px 30px rgba(255, 255, 255, 1), -2px -2px 30px rgba(255, 255, 255, 1),
+      2px -2px 30px rgba(255, 255, 255, 1),
+      0px 5px 0px rgba(255, 255, 255, 0.38),
+      0px 7px 30px rgba(255, 255, 255, 0.38),
+      0px 10px 0px rgba(255, 255, 255, 0.27),
+      0px 12px 30px rgba(255, 255, 255, 0.27),
+      0px 15px 0px rgba(255, 255, 255, 0.21),
+      0px 17px 30px rgba(255, 255, 255, 0.21),
+      0px 20px 0px rgba(255, 255, 255, 0.1),
+      0px 22px 30px rgba(255, 255, 255, 0.21);
 
-     // 0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(49, 47, 47, 0.45),
-     // 0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35),
-     // 0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2),
-     // 0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
-     // 0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
+    // 0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(49, 47, 47, 0.45),
+    // 0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35),
+    // 0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2),
+    // 0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
+    // 0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
   }
-
 }
 
 @keyframes swing {
