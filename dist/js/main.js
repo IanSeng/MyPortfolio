@@ -6,7 +6,7 @@ var tlContact1 = new TimelineMax();
 var tlContact2 = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();
 var tlProject3 = new TimelineMax({ onUpdate: updatePercentage });
-var rellax = new Rellax(".rellax"); 
+var rellax = new Rellax(".rellax");
 //-------------typing ---------------------
 const texts = ["student", "developer", "gamer", "dreamer"];
 let count = 0;
@@ -36,9 +36,9 @@ let letter = "";
   setTimeout(type, 400);
 })();
 
-function removeTyping(){
-    letter = currentText.slice(text.length, --index);
-    document.querySelector(".typing").textContent = letter;
+function removeTyping() {
+  letter = currentText.slice(text.length, --index);
+  document.querySelector(".typing").textContent = letter;
 }
 //refer to https://stackoverflow.com/questions/37360616/how-to-create-a-side-menu-that-the-active-item-follow-the-page-content-locatio
 window.onscroll = function() {
@@ -97,12 +97,43 @@ tlProject2.to(".sun", 2, {
   height: 250,
   scale: 1
 });
-
-
-
-tlAbout1.from("#about-header", 1, {x:-600, opacity: 0});
+//----------NEW-------------------
+var tl = new TimelineMax();
+tl.fromTo(
+  ".i",
+  0.8,
+  { textShadow: "" },
+  {
+    textShadow:
+      "70px 0px rgba(49, 47, 47, 0.85),140px 0px rgba(49, 47, 47, 0.79), 210px 0px rgba(49, 47, 47, 0.62),280px 0px rgba(49, 47, 47, 0.43), 350px 0px rgba(49, 47, 47, 0.38),420px 0px rgba(49, 47, 47, 0.3);"
+  }
+)
+  .fromTo(
+    ".innerl",
+    0.8,
+    { textShadow: "" },
+    {
+      textShadow:
+        "0px -50px rgba(49, 47, 47, 0.77),0px -110px rgba(49, 47, 47, 0.73), 0px -180px rgba(49, 47, 47, 0.51),0px -270px rgba(245, 215, 56, 0.4), 0px -400px rgba(49, 47, 47, 0.22);"
+    }
+  )
+  .fromTo(
+    ".n",
+    0.8,
+    { textShadow: "" },
+    {
+      textShadow:
+        "50px 0px rgba(245, 215, 56, 0.81), 100px 0px rgba(49, 47, 47, 0.59),150px 0px rgba(245, 215, 56, 0.47), 200px 0px rgba(49, 47, 47, 0.28),250px 0px rgba(49, 47, 47, 0.28), 300px 0px rgba(245, 215, 56, 0.32),350px 0px rgba(49, 47, 47, 0.19), 400px 0px rgba(245, 215, 56, 0.15)"
+    }
+  ).fromTo(
+    ".ianseng",
+    2,
+    { opacity:0},
+    { opacity:1}
+  );
+//----------NEW-------------------
+tlAbout1.from("#about-header", 1, { x: -600, opacity: 0 });
 tlAbout2.from("#myself2", 0.5, { x: 200, opacity: 0 });
-
 
 tlProject2.from(".project2", 0.5, { x: -200, opacity: 0 });
 tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
@@ -111,7 +142,9 @@ tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
 //tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
 tlContact2.from(".contact1", 2, { opacity: 0 });
 //tlAbout2.to(".sun", 2,{x:200, y:-250, scale:1});
-tlProject3.from("#lineimg", 1, { x: -1000}).to("#sticky3amore", 2, { x: -2000},0);
+tlProject3
+  .from("#lineimg", 1, { x: -1000 })
+  .to("#sticky3amore", 2, { x: -2000 }, 0);
 //to("#sticky3amore", 2, { x: -800},0);
 //-------------scene-----------------
 let scene1 = new ScrollMagic.Scene({
