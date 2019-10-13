@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Roboto+Mono:700&display=swap");
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", monospace;
-  background-color: black;
+  background-color: white;
   overflow-x: hidden; }
   body section {
     height: 100vh;
@@ -41,10 +41,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Liu Jian Mao Cao", cursive;
     font-weight: 900;
     font-size: 7em;
-    transform: translate(-10%, -93%);
+    transform: translate(10%, -93%);
     width: 700px;
     height: 300px;
     text-shadow: -20px 30px 7px rgba(0, 0, 0, 0.16); }
@@ -115,6 +115,100 @@ body {
     right: 0;
     transform: translate(0%, 80vh);
     width: 200px; }
+
+.sticky3 {
+  background: white;
+  height: 100vh; }
+  .sticky3 .project1 {
+    position: absolute;
+    text-align: center;
+    font-size: 250px;
+    font-weight: 900;
+    width: 2000px;
+    top: 43%;
+    color: black;
+    transform: translate(-8%, 10%); }
+
+.sticky3b {
+  background: white;
+  height: 130vh; }
+  .sticky3b .picmymedlogo {
+    position: absolute;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 10.5%;
+    z-index: 20; }
+  .sticky3b .picmymedtitle {
+    position: absolute;
+    top: 45%;
+    left: 10.5%;
+    font-size: 2em;
+    font-weight: 800;
+    color: white;
+    transform: translateY(50%); }
+  .sticky3b .picmymeddes {
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 20vw;
+    top: 55%;
+    left: 10.5%; }
+  .sticky3b .picmymedlogo2 {
+    position: absolute;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    right: 10.5%;
+    z-index: 20; }
+  .sticky3b .sfotitle {
+    position: absolute;
+    top: 45%;
+    right: 10.5%;
+    text-align: right;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: white;
+    transform: translateY(50%); }
+  .sticky3b .sfodes {
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 20vw;
+    top: 55%;
+    right: 8.5%; }
+  .sticky3b .outter {
+    display: flex;
+    height: 100vh;
+    width: 100wv;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .sticky3b .outter .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(30%, -100%);
+      width: 250px;
+      height: 250px;
+      background: black;
+      box-shadow: 0px 0px 60px #fff, inset 0px 0px 30px #fff;
+      border-radius: 50%;
+      animation: "";
+      z-index: 10; }
+  .sticky3b .innerCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 0px 60px #feed5b, inset 15px 15px 50px #fffebb, inset 70px 150px 50px #f4d26d, inset 80px 180px 50px #d7944e, inset 600px 400px 50px #c26337;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1; }
 
 .sticky3a {
   background: white; }
@@ -337,12 +431,6 @@ body {
 /*.active {
   background: silver;
 }*/
-.project1 {
-  position: absolute;
-  font-size: 5em;
-  top: 43%;
-  color: white; }
-
 .project2 {
   padding-right: 5px;
   color: white;
@@ -351,34 +439,3 @@ body {
   right: 0px;
   top: 20%;
   width: 300px; }
-
-.outter {
-  display: flex;
-  height: 100vh;
-  width: 100wv;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  .outter .sun {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: black;
-    box-shadow: 0px 0px 60px #fff, inset 0px 0px 30px #fff;
-    border-radius: 50%;
-    animation: "";
-    position: fixed;
-    z-index: 1; }
-
-.innerCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  box-shadow: 0px 0px 60px #feed5b, inset 15px 15px 50px #fffebb, inset 70px 150px 50px #f4d26d, inset 80px 180px 50px #d7944e, inset 600px 400px 50px #c26337;
-  border-radius: 50%;
-  text-align: center;
-  position: fixed;
-  z-index: 1; }

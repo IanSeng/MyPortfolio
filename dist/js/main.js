@@ -1,8 +1,8 @@
 var tlAbout1 = new TimelineMax();
 var tlAbout2 = new TimelineMax({ onUpdate: updatePercentage });
-var tlProject1 = new TimelineMax();
+var tlProject1 = new TimelineMax({ onUpdate: updatePercentage });
 var tlProject2 = new TimelineMax({ onUpdate: updatePercentage });
-var tlContact1 = new TimelineMax();
+var tlSun = new TimelineMax();
 var tlContact2 = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();
 var tlProject3 = new TimelineMax({ onUpdate: updatePercentage });
@@ -87,16 +87,44 @@ function scrollToFunction(section) {
   //console.log("-"+window.innerHeight);
 }
 
-//-----------------------------
+//-----------Sun------------------
 //tlAbout2.to(".sun", 2,{x:200, y:-250, width:100, height:100,scale:1});
-tlProject2.to(".sun", 2, {
-  x: 0,
-  y: -50,
-  zIndex: 10,
-  width: 250,
-  height: 250,
-  scale: 1
-});
+// tlProject2.to(".sun", 2, {
+//   x: 0,
+//   y: -50,
+//   zIndex: 10,
+//   width: 250,
+//   height: 250,
+//   scale: 1
+// });
+tlSun
+  .fromTo(
+    ".sun",
+    2.5,
+    {
+      top: "50%",
+      left: "50%",
+      x: "30%",
+      y: "-100%",
+      zIndex: 10,
+      width: 250,
+      height: 250,
+      scale: 1
+    },
+    {
+      top: "50%",
+      left: "50%",
+      x: "-50%",
+      y: "-100%",
+      zIndex: 10,
+      width: 250,
+      height: 250,
+      scale: 1
+    }
+  )
+  .fromTo(".sticky3b", 1, { background: "white" }, { background: "black" })
+  .fromTo([".picmymedlogo2", ".picmymedlogo"], 1, { opacity: 0 }, {opacity: 1});
+
 //----------NEW-------------------
 var tl = new TimelineMax();
 tl.fromTo(
@@ -125,18 +153,15 @@ tl.fromTo(
       textShadow:
         "50px 0px rgba(245, 215, 56, 0.81), 100px 0px rgba(49, 47, 47, 0.59),150px 0px rgba(245, 215, 56, 0.47), 200px 0px rgba(49, 47, 47, 0.28),250px 0px rgba(49, 47, 47, 0.28), 300px 0px rgba(245, 215, 56, 0.32),350px 0px rgba(49, 47, 47, 0.19), 400px 0px rgba(245, 215, 56, 0.15)"
     }
-  ).fromTo(
-    ".ianseng",
-    2,
-    { opacity:0},
-    { opacity:1}
-  );
+  )
+  .fromTo(".ianseng", 2, { opacity: 0 }, { opacity: 1 });
 //----------NEW-------------------
 tlAbout1.from("#about-header", 1, { x: -600, opacity: 0 });
 tlAbout2.from("#myself2", 0.5, { x: 200, opacity: 0 });
 
 tlProject2.from(".project2", 0.5, { x: -200, opacity: 0 });
-tlProject1.from(".project1", 0.5, { x: 200, opacity: 0 });
+tlProject1.to(".project1", 1, { x: -350 });
+//tlProject1.to(".project1", 0.5, { x: 100, opacity: 0 });
 
 //tlContact2.from(".contact2", 0.5, { x: -200, opacity: 0 });
 //tlContact1.from(".contact1", 0.5, { x: 200, opacity: 0 });
@@ -145,6 +170,7 @@ tlContact2.from(".contact1", 2, { opacity: 0 });
 tlProject3
   .from("#lineimg", 1, { x: -1000 })
   .to("#sticky3amore", 2, { x: -2000 }, 0);
+
 //to("#sticky3amore", 2, { x: -800},0);
 //-------------scene-----------------
 let scene1 = new ScrollMagic.Scene({
@@ -163,19 +189,26 @@ let scene2 = new ScrollMagic.Scene({
   .addTo(controller);
 
 let scene3 = new ScrollMagic.Scene({
-  triggerElement: ".sticky3"
+  triggerElement: ".sticky3",
+  duration: "100%"
 })
   .setTween(tlProject1)
   .addTo(controller);
 
-let scene4 = new ScrollMagic.Scene({
-  triggerElement: ".sticky3",
-  triggerHook: "onLeave",
-  duration: "100%"
+let scene3a = new ScrollMagic.Scene({
+  triggerElement: ".sticky3b"
 })
-  .setPin(".sticky3")
-  .setTween(tlProject2)
+  .setTween(tlSun)
   .addTo(controller);
+
+// let scene4 = new ScrollMagic.Scene({
+//   triggerElement: ".sticky3",
+//   triggerHook: 0.4,
+//   duration: "100%"
+// })
+//   .setPin(".sticky3")
+//   .setTween(tlProject2)
+//   .addTo(controller);
 
 let scene5 = new ScrollMagic.Scene({
   triggerElement: ".sticky4"
