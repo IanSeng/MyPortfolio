@@ -1,4 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Roboto+Mono:700&display=swap");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 33px;
+    height: 3px;
+    margin: 0 0 8px 0;
+    background: #ffff;
+    transition: all 0.5s ease-out; }
+    .menu-btn .btn-line:nth-child(1) {
+      box-shadow: 0 0 0.4vw  0.25vw #F7F7F5,  0 0   4vw  0.4vw #FEFEFD, inset 0 0 1.5vw  0.4vw #FEFEFD, inset 0 0 0.4vw  0.2vw #F7F7F5, inset 0 0 0.5vw  0.2vw #fff7f7;
+      border-radius: 1.5rem; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-index, .menu-about, .menu-work {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 33.33%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-index {
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.8s ease-out; }
+    .menu-index.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-about {
+    transform: translate3d(0, 100%, 0);
+    justify-content: flex-start;
+    transition: all 1.1s ease-out; }
+    .menu-about.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-work {
+    transform: translate3d(0, 100%, 0);
+    transition: all 1.3s ease-out; }
+    .menu-work.show {
+      transform: translate3d(0, 0, 0); }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
 body {
   margin: 0;
   padding: 0;
@@ -41,10 +112,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-family: "Liu Jian Mao Cao", cursive;
     font-weight: 900;
     font-size: 7em;
-    transform: translate(10%, -93%);
+    transform: translate(-10%, -103%);
     width: 700px;
     height: 300px;
     text-shadow: -20px 30px 7px rgba(0, 0, 0, 0.16); }
@@ -75,7 +145,7 @@ body {
       transform: translate(-43%, 60%) rotate(90deg);
       text-shadow: 0px -30px rgba(216, 216, 216, 0.55), 0px -60px rgba(216, 216, 216, 0.25); }
       .sticky2 .about-container .about-header .aboutline {
-        background: url(/dist/img/warningLine.png);
+        background: url(../img/warningLine.png);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent; }
@@ -118,7 +188,7 @@ body {
 
 .sticky3 {
   background: white;
-  height: 100vh; }
+  height: 150vh; }
   .sticky3 .project1 {
     position: absolute;
     text-align: center;
@@ -126,24 +196,35 @@ body {
     font-weight: 900;
     width: 2000px;
     top: 43%;
-    color: black;
-    transform: translate(-8%, 10%); }
+    color: #312f2f;
+    text-shadow: 20px 30px 7px rgba(0, 0, 0, 0.16);
+    transform: translate(-8%, 20%); }
+  .sticky3 .project1a {
+    position: absolute;
+    text-align: center;
+    font-size: 250px;
+    font-weight: 900;
+    width: 2000px;
+    top: 43%;
+    color: #312f2f;
+    text-shadow: 20px 30px 7px rgba(0, 0, 0, 0.16);
+    transform: translate(-20%, -110%) scale(-1, 1); }
 
 .sticky3b {
-  background: white;
-  height: 130vh; }
+  background: black;
+  height: 200vh; }
   .sticky3b .picmymedlogo {
     position: absolute;
     object-fit: cover;
     width: 200px;
     height: 200px;
-    top: 20%;
-    left: 10.5%;
+    top: 12%;
+    left: 7.5%;
     z-index: 20; }
   .sticky3b .picmymedtitle {
     position: absolute;
-    top: 45%;
-    left: 10.5%;
+    top: 28%;
+    left: 7.5%;
     font-size: 2em;
     font-weight: 800;
     color: white;
@@ -153,20 +234,33 @@ body {
     color: white;
     text-align: left;
     width: 20vw;
-    top: 55%;
-    left: 10.5%; }
-  .sticky3b .picmymedlogo2 {
+    top: 35%;
+    left: 7.5%;
+    opacity: 0.5; }
+  .sticky3b .picmymedlink {
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 0px 0px 200px #fff, 0px 0px 150px #fff, 0px 0px 60px #fff, 0px 0px 30px #fff; }
+  .sticky3b .picmymedlink:hover {
+    animation: glow 0.5s ease-in-out infinite alternate; }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #192340, 0 0 30px #192340, 0 0 40px #192340, 0 0 50px #192340, 0 0 60px #192340, 0 0 70px #192340; }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #62c6eb, 0 0 40px #62c6eb, 0 0 50px #62c6eb, 0 0 60px #62c6eb, 0 0 70px #62c6eb, 0 0 80px #62c6eb; } }
+  .sticky3b .sfologo {
     position: absolute;
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    top: 20%;
-    right: 10.5%;
+    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    top: 41%;
+    right: 7.5%;
     z-index: 20; }
   .sticky3b .sfotitle {
     position: absolute;
-    top: 45%;
-    right: 10.5%;
+    top: 58%;
+    right: 7.5%;
     text-align: right;
     font-size: 1.8em;
     font-weight: 800;
@@ -175,72 +269,105 @@ body {
   .sticky3b .sfodes {
     position: absolute;
     color: white;
-    text-align: left;
+    text-align: right;
     width: 20vw;
-    top: 55%;
-    right: 8.5%; }
+    top: 65%;
+    right: 7.5%; }
   .sticky3b .outter {
-    display: flex;
-    height: 100vh;
-    width: 100wv;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .sticky3b .outter .sun {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(30%, -100%);
-      width: 250px;
-      height: 250px;
-      background: black;
-      box-shadow: 0px 0px 60px #fff, inset 0px 0px 30px #fff;
-      border-radius: 50%;
-      animation: "";
-      z-index: 10; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -82%) rotate(45deg);
+    width: 250px;
+    height: 250px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 30px #fff, inset 0px 0px 30px #fff;
+    border-radius: 10%;
+    text-align: center;
+    z-index: 20; }
+  .sticky3b .outter:hover {
+    animation: glow1 1.5s ease-in-out infinite alternate; }
+  .sticky3b .text97 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -170%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 50px #fff;
+    font-weight: 900;
+    font-size: 5.5em; }
+  .sticky3b .textkm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 30px #fff;
+    font-size: 3em; }
   .sticky3b .innerCircle {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
-    width: 250px;
-    height: 250px;
-    box-shadow: 0px 0px 60px #feed5b, inset 15px 15px 50px #fffebb, inset 70px 150px 50px #f4d26d, inset 80px 180px 50px #d7944e, inset 600px 400px 50px #c26337;
-    border-radius: 50%;
+    transform: translate(-50%, -90%) rotate(45deg);
+    width: 210px;
+    height: 210px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 20px #feed5b, inset 0px 0px 20px #feed5b;
+    border-radius: 7%;
     text-align: center;
     z-index: 1; }
 
+@keyframes glow1 {
+  0% {
+    filter: drop-shadow(0px 0px 30px #fff) drop-shadow(0px 0px 30px #fff); }
+  20% {
+    filter: drop-shadow(0px 0px 30px orange) drop-shadow(0px 0px 30px orange); }
+  40% {
+    filter: drop-shadow(0px 0px 30px red) drop-shadow(0px 0px 30px red); }
+  60% {
+    filter: drop-shadow(0px 0px 30px green) drop-shadow(0px 0px 30px green); }
+  80% {
+    filter: drop-shadow(0px 0px 30px purple) drop-shadow(0px 0px 30px purple); }
+  100% {
+    filter: drop-shadow(0px 0px 30px #fff) drop-shadow(0px 0px 30px yellow); } }
+
 .sticky3a {
-  background: white; }
+  background: white;
+  z-index: 5; }
   .sticky3a.lineimg {
     position: absolute;
     top: 30%;
     height: 300px;
-    width: 7000px;
-    transform: translateX(-80%) rotate(-1deg);
-    background: url(/dist/img/Grid1.png);
+    width: 3000vw;
+    transform: translate(-80%, 30%) rotate(0deg);
+    background: url(../img/Grid1.png);
     font-size: 15em;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 0; }
   .sticky3a.more {
     position: relative;
     font-weight: 900;
     font-size: 230px;
-    width: 5000px;
+    width: 6000px;
     background: transparent;
-    transform: translate(5%, 45%) rotate(-2deg); }
+    transform: translate(5%, 60%) rotate(0deg);
+    z-index: 0; }
   .sticky3a .warning1 {
     position: absolute;
     height: 38px;
     width: 150vw;
     transform: translate(-30%, 1300%) rotate(20deg);
-    background: url(/dist/img/smallWarning.png);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); }
+    background: url(../img/smallWarning.png);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 5; }
   .sticky3a .warning2 {
     position: absolute;
     height: 70px;
     width: 150vw;
     transform: translate(-10%, 400%) rotate(-33deg);
-    background: url(/dist/img/largeWarning.png);
+    background: url(../img/largeWarning.png);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     z-index: 0; }
   .sticky3a .warning3 {
@@ -248,31 +375,54 @@ body {
     height: 50px;
     width: 150vw;
     transform: translate(-5%, 600%) rotate(-22deg);
-    background: url(/dist/img/mediumWarning.png);
+    background: url(../img/mediumWarning.png);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
-    z-index: 10; }
+    z-index: 3; }
   .sticky3a.githubSign {
     position: absolute;
-    height: 200px;
-    width: 200px;
-    background: url(/dist/img/githubWarning.png);
-    transform: rotate(-2deg);
-    right: 20%;
-    top: 60%;
-    animation: swing ease-in-out 1s infinite alternate; }
+    height: 215px;
+    width: 210px;
+    background: url(../img/githubWarning.png);
+    transform: translate(0%, 0%) rotate(-2deg);
+    right: 15%;
+    top: 170%;
+    border: 0;
+    outline: 0; }
 
 .sticky4 {
   background: white;
   padding: 0;
   overflow: hidden;
-  z-index: -1; }
+  height: 100vh;
+  z-index: 1; }
   .sticky4 .contact1 {
     position: absolute;
-    font-size: 23vmax;
+    font-size: 23.65vmax;
     transform: translateY(70vh);
     text-shadow: 0px -50px rgba(49, 47, 47, 0.55), 0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(49, 47, 47, 0.45), 0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35), 0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2), 0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1), 0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03); }
   .sticky4 .contactc {
     text-shadow: 0px -50px rgba(49, 47, 47, 0.55), 0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(224, 209, 19, 0.75), 0px -200px rgba(49, 47, 47, 0.4), 0px -250px rgba(49, 47, 47, 0.35), 0px -300px rgba(49, 47, 47, 0.3), 0px -350px rgba(49, 47, 47, 0.2), 0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1), 0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03); }
+  .sticky4 .emaillink {
+    position: absolute;
+    top: 4%;
+    width: 100vw;
+    text-align: center; }
+  .sticky4 .email {
+    font-size: 2em;
+    color: rgba(49, 47, 47, 0.35); }
+  .sticky4 .email:hover {
+    color: rgba(49, 47, 47, 0.95); }
+  .sticky4 .footer {
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+    background: rgba(49, 47, 47, 0.25);
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 5px; }
+  .sticky4 .footercontent {
+    color: white;
+    font-size: 15px; }
 
 .sticky4a {
   background: transparent;
@@ -284,7 +434,7 @@ body {
     width: 80%;
     opacity: 0.32;
     transform: translate(-30%, 93%) rotate(79deg);
-    background: url(/dist/img/triangleSign.png);
+    background: url(./img/triangleSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 4; }
@@ -294,7 +444,7 @@ body {
     width: 80%;
     opacity: 0.13;
     transform: translate(-30%, 95%) rotate(79deg);
-    background: url(/dist/img/triangleSign.png);
+    background: url(./img/triangleSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 5; }
@@ -304,7 +454,7 @@ body {
     width: 100%;
     opacity: 0.11;
     transform: translate(-15%, 55%) rotate(41deg);
-    background: url(/dist/img/stopSign.png);
+    background: url(./img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 3; }
@@ -314,7 +464,7 @@ body {
     width: 100%;
     opacity: 0.22;
     transform: translate(-14%, 53%) rotate(41deg);
-    background: url(/dist/img/stopSign.png);
+    background: url(./img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2; }
@@ -323,7 +473,7 @@ body {
     height: 45%;
     width: 45%;
     transform: translate(30%, 40%) rotate(0deg);
-    background: url(/dist/img/radioactiveSign.png);
+    background: url(./img/radioactiveSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -2; }
@@ -439,3 +589,229 @@ body {
   right: 0px;
   top: 20%;
   width: 300px; }
+
+@media screen and (min-width: 1171px) {
+  .project {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .project {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  .mobileLogo {
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    z-index: 20; }
+  .sticky1 {
+    background: white;
+    height: 100vh; }
+    .sticky1 .i {
+      visibility: hidden; }
+    .sticky1 .n {
+      visibility: hidden; }
+    .sticky1 .innerl {
+      visibility: hidden; }
+    .sticky1 .ianseng {
+      visibility: hidden; }
+    .sticky1 .a {
+      visibility: hidden; }
+    .sticky1 .mobileContainer1 {
+      width: 98px;
+      height: 98px;
+      background: yellow;
+      position: absolute;
+      top: 30%;
+      left: 20%;
+      transform: translate(-50%, -50%); }
+    .sticky1 .mobileHello {
+      font-size: 5em; }
+    .sticky1 .mobileIanSeng {
+      position: absolute;
+      font-size: 3.5em; }
+  .sticky2 {
+    background: white;
+    height: 100vh; }
+    .sticky2 .mobileContainer2 {
+      width: 98px;
+      height: 98px;
+      background: red;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%); }
+    .sticky2 .mobileAbout {
+      font-size: 5em; }
+    .sticky2 .mobileMyself {
+      width: 80vw;
+      font-size: 1.8em;
+      padding-bottom: 30px; }
+    .sticky2 .mobileMyself2 {
+      position: absolute;
+      width: 80vw;
+      font-size: 1.3em; }
+    .sticky2 .about-header {
+      visibility: hidden; }
+    .sticky2 .about-myself {
+      visibility: hidden;
+      color: black;
+      font-size: 2.5em;
+      font-family: "PT Sans", sans-serif;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px; }
+      .sticky2 .about-myself .canada:after {
+        content: "";
+        text-decoration: underline; }
+      .sticky2 .about-myself .canada:hover:after {
+        content: " and Malaysia";
+        opacity: 0.5; }
+    .sticky2 .typing {
+      position: relative;
+      color: #4caf50; }
+    .sticky2 .typing::after {
+      content: "";
+      position: relative;
+      width: 1px;
+      height: 5%;
+      border-right: 2px solid black;
+      animation: blink 1s infinite ease; }
+    .sticky2 .about-myself2 {
+      visibility: hidden; }
+  .sticky3 {
+    background: black;
+    height: 210vh; }
+    .sticky3 .mobileContainer3 {
+      width: 98px;
+      height: 98px;
+      background: blue;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+      transform: translate(-50%, -50%); }
+    .sticky3 .mobileProject {
+      font-size: 5em; }
+    .sticky3 .mobilePicmymed {
+      font-size: 1.5em;
+      width: 80vw;
+      padding-top: 50px;
+      color: #fff; }
+    .sticky3 .mobilePicmymedlogo {
+      object-fit: cover;
+      width: 30vw;
+      height: 30vw; }
+    .sticky3 .mobilePicmymedDescription {
+      font-size: 1.3em;
+      width: 80vw;
+      color: #fff; }
+    .sticky3 .picmymedlink {
+      color: white;
+      animation: glow 1.5s ease-in-out infinite alternate; }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #192340, 0 0 30px #192340, 0 0 10px #192340, 0 0 10px #192340, 0 0 60px #192340, 0 0 70px #192340; }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 10px #62c6eb, 0 0 20px #62c6eb, 0 0 10px blue, 0 0 20px blue, 0 0 10px #62c6eb, 0 0 10px #62c6eb; } }
+    .sticky3 .mobileSfom {
+      font-size: 1.5em;
+      width: 80vw;
+      padding-top: 160px;
+      color: #fff; }
+    .sticky3 .mobileSfologo {
+      object-fit: cover;
+      width: 35vw;
+      height: 30vw; }
+    .sticky3 .mobileSfoDescription {
+      font-size: 1.3em;
+      width: 80vw;
+      color: #fff; }
+    .sticky3 .mobileMoreProject {
+      font-size: 2.8em;
+      width: 100vw;
+      padding-top: 100px;
+      color: #fff; }
+    .sticky3 .project1 {
+      visibility: hidden; }
+    .sticky3 .project1a {
+      visibility: hidden; }
+  .sticky3b {
+    visibility: hidden;
+    height: 0; }
+  .sticky3a {
+    visibility: hidden;
+    height: 10px;
+    position: relative; }
+    .sticky3a.lineimg {
+      visibility: hidden; }
+    .sticky3a.more {
+      visibility: hidden; }
+    .sticky3a .warning1 {
+      visibility: hidden; }
+    .sticky3a .warning2 {
+      visibility: hidden; }
+    .sticky3a .warning3 {
+      visibility: hidden; }
+    .sticky3a.githubSign {
+      visibility: hidden; }
+  .sticky4 {
+    height: 90vh; }
+    .sticky4 .mobileContainer4 {
+      width: 98px;
+      height: 98px;
+      background: #83b8bb;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%); }
+    .sticky4 .mobileContact {
+      font-size: 5em;
+      padding-bottom: 30px; }
+    .sticky4 .mobilebox {
+      font-size: 1.5em; }
+    .sticky4 .mobileContactBox {
+      position: parallel;
+      width: 80vw;
+      height: 98px; }
+    .sticky4 .fa {
+      padding-top: 35px;
+      font-size: 30px;
+      height: 63px;
+      width: 98px;
+      text-align: center;
+      text-decoration: none; }
+    .sticky4 .fa:hover {
+      opacity: 0.7; }
+    .sticky4 .fa-envelope {
+      background: #f5dd91;
+      color: white; }
+    .sticky4 .fa-github {
+      background: #f68e5f;
+      color: white; }
+    .sticky4 .fa-codepen {
+      background: #f86c5e;
+      color: white; }
+    .sticky4 .fa-facebook {
+      background: #3b5998;
+      color: white; }
+    .sticky4 .mobileFooter {
+      height: 50px;
+      width: 80vw;
+      text-align: center;
+      padding-bottom: 10px; }
+    .sticky4 .contact1 {
+      visibility: hidden; }
+    .sticky4 .contactc {
+      visibility: hidden; }
+    .sticky4 .footer {
+      visibility: hidden; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  main {
+    padding: 1rem; }
+  .project {
+    grid-template-columns: 1fr; } }

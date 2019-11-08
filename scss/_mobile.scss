@@ -12,50 +12,311 @@
 }
 // Tablets & Small Laptops
 @include mediaMd {
-  main {
-    align-items: center;
-    text-align: center;
-    .lg-heading {
-      line-height: 1;
-      margin-bottom: 2rem;
+  .mobileLogo{
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    z-index: 20;
+  }
+  .sticky1 {
+    background: white;
+    height: 100vh;
+    .i {
+      visibility: hidden;
+    }
+    .n {
+      visibility: hidden;
+    }
+
+    .innerl {
+      visibility: hidden;
+    }
+    .ianseng {
+      visibility: hidden;
+    }
+    .a {
+      visibility: hidden;
+    }
+
+    .mobileContainer1 {
+      width: 98px;
+      height: 98px;
+      background: yellow;
+      position: absolute;
+      top: 30%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    .mobileHello {
+      font-size: 5em;
+    }
+    .mobileIanSeng {
+      position: absolute;
+      font-size: 3.5em;
     }
   }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-    &.show {
-      transform: translate3d(0, 0, 0);
+
+  .sticky2 {
+    background: white;
+    height: 100vh;
+
+    //Moble About
+    .mobileContainer2 {
+      width: 98px;
+      height: 98px;
+      background: red;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    .mobileAbout {
+      font-size: 5em;
+    }
+
+    .mobileMyself {
+      width: 80vw;
+      font-size: 1.8em;
+      padding-bottom: 30px;
+    }
+
+    .mobileMyself2 {
+      position: absolute;
+      width: 80vw;
+      font-size: 1.3em;
+    }
+    .about-header {
+      visibility: hidden;
+    }
+
+    .about-myself {
+      visibility: hidden;
+      color: black;
+      font-size: 2.5em;
+      font-family: "PT Sans", sans-serif;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      //border: 3px solid #73AD21;
+      width: 300px;
+
+      .canada:after {
+        content: "";
+        text-decoration: underline;
+      }
+
+      .canada:hover:after {
+        content: " and Malaysia";
+        opacity: 0.5;
+      }
+    }
+    .typing {
+      position: relative;
+      color: #4caf50;
+    }
+
+    .typing::after {
+      content: "";
+      position: relative;
+
+      width: 1px;
+      height: 5%;
+      border-right: 2px solid black;
+      animation: blink 1s infinite ease;
+    }
+
+    .about-myself2 {
+      visibility: hidden;
     }
   }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0); //Slide in from left
-    font-size: 25px;
-  }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); //Slide in from right
-    .portrait {
-      background: $portrait-imageSm;
-      width: 150px;
-      height: 150px;
+  .sticky3 {
+    background: black;
+    height: 210vh;
+
+    .mobileContainer3 {
+      width: 98px;
+      height: 98px;
+      background: blue;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    .mobileProject {
+      font-size: 5em;
+    }
+
+    .mobilePicmymed {
+      font-size: 1.5em;
+      width: 80vw;
+      padding-top: 50px;
+      color: #fff;
+    }
+    .mobilePicmymedlogo {
+      object-fit: cover;
+      width: 30vw;
+      height: 30vw;
+    }
+    .mobilePicmymedDescription {
+      font-size: 1.3em;
+      width: 80vw;
+      color: #fff;
+    
+    }
+    .picmymedlink {
+      color:white;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #192340, 0 0 30px #192340,
+          0 0 10px #192340, 0 0 10px #192340, 0 0 60px #192340, 0 0 70px #192340;
+      }
+      to {
+        text-shadow: 0 0 10px #fff, 0 0 10px #62c6eb, 0 0 20px #62c6eb,
+          0 0 10px blue, 0 0 20px blue, 0 0 10px #62c6eb, 0 0 10px #62c6eb;
+      }
+    }
+    .mobileSfom {
+      font-size: 1.5em;
+      width: 80vw;
+      padding-top: 160px;
+      color: #fff;
+    }
+
+    .mobileSfologo {
+      object-fit: cover;
+      width: 35vw;
+      height: 30vw;
+    }
+
+    .mobileSfoDescription {
+      font-size: 1.3em;
+      width: 80vw;
+      color: #fff;
+    }
+    .mobileMoreProject {
+      font-size: 2.8em;
+      width: 100vw;
+      padding-top: 100px;
+      color: #fff;
+    }
+    .project1 {
+      visibility: hidden;
+    }
+
+    .project1a {
+      visibility: hidden;
     }
   }
-  .about-info {
-    grid-template-areas:
-      "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
-    grid-template-columns: 1fr;
+  .sticky3b {
+    visibility: hidden;
+    height: 0;
   }
-  .project {
-    grid-template-columns: repeat(2, 1fr);
+
+  .sticky3a {
+    visibility: hidden;
+    height: 10px;
+    position: relative;
+
+    &.lineimg {
+      visibility: hidden;
+    }
+    &.more {
+      visibility: hidden;
+    }
+    .warning1 {
+      visibility: hidden;
+    }
+    .warning2 {
+      visibility: hidden;
+    }
+    .warning3 {
+      visibility: hidden;
+    }
+    &.githubSign {
+      visibility: hidden;
+    }
+  }
+
+  .sticky4 {
+    height: 90vh;
+    .mobileContainer4 {
+      width: 98px;
+      height: 98px;
+      background: #83b8bb;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    .mobileContact {
+      font-size: 5em;
+      padding-bottom: 30px;
+    }
+    .mobilebox {
+      font-size: 1.5em;
+    }
+
+    .mobileContactBox {
+      position: parallel;
+      width: 80vw;
+      height: 98px;
+      //background: red;
+    }
+    .fa {
+      padding-top: 35px;
+      font-size: 30px;
+      height: 63px;
+      width: 98px;
+      text-align: center;
+      text-decoration: none;
+      //margin: 5px 2px;
+    }
+    .fa:hover {
+      opacity: 0.7;
+    }
+    .fa-envelope {
+      background: #f5dd91;
+      color: white;
+    }
+
+    .fa-github {
+      background: #f68e5f;
+      color: white;
+    }
+
+    .fa-codepen {
+      background: #f86c5e;
+      color: white;
+    }
+
+    .fa-facebook {
+      background: #3b5998;
+      color: white;
+    }
+
+    .mobileFooter {
+      height: 50px;
+      width: 80vw;
+      //background: red;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .contact1 {
+      visibility: hidden;
+    }
+    .contactc {
+      visibility: hidden;
+    }
+    .footer {
+      visibility: hidden;
+    }
   }
 }
+
 // Smartphones
 @include mediaSm {
   main#home h1 {

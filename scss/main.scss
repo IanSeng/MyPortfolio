@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Roboto+Mono:700&display=swap");
+@import "config";
+@import "menu";
 body {
   margin: 0;
   padding: 0;
@@ -49,7 +51,6 @@ body {
     font-weight: bold;
     color: #312f2f;
     font-size: 25em;
-
     text-shadow: 0px -50px rgba(49, 47, 47, 0.77),
       0px -110px rgba(49, 47, 47, 0.73), 0px -180px rgba(49, 47, 47, 0.51),
       0px -270px rgba(49, 47, 47, 0.4), 0px -400px rgba(49, 47, 47, 0.22);
@@ -58,10 +59,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-family: "Liu Jian Mao Cao", cursive;
+    //font-family: "Liu Jian Mao Cao", cursive;
     font-weight: 900;
     font-size: 7em;
-    transform: translate(10%, -93%);
+    transform: translate(-10%, -103%);
     width: 700px;
     height: 300px;
     text-shadow: -20px 30px 7px rgba(0, 0, 0, 0.16);
@@ -98,7 +99,7 @@ body {
       text-shadow: 0px -30px rgba(216, 216, 216, 0.55),
         0px -60px rgba(216, 216, 216, 0.25);
       .aboutline {
-        background: url(/dist/img/warningLine.png);
+        background: url(../img/warningLine.png);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -158,7 +159,7 @@ body {
 
 .sticky3 {
   background: white;
-  height: 100vh;
+  height: 150vh;
 
   .project1 {
     position: absolute;
@@ -167,151 +168,245 @@ body {
     font-weight: 900;
     width: 2000px;
     top: 43%;
-    color: black;
-    transform: translate(-8%, 10%);
+    color: #312f2f;
+    text-shadow: 20px 30px 7px rgba(0, 0, 0, 0.16);
+    transform: translate(-8%, 20%);
+  }
+
+  .project1a {
+    position: absolute;
+    text-align: center;
+    font-size: 250px;
+    font-weight: 900;
+    width: 2000px;
+    top: 43%;
+    color: #312f2f;
+    text-shadow: 20px 30px 7px rgba(0, 0, 0, 0.16);
+    transform: translate(-20%, -110%) scale(-1, 1);
   }
 }
 
 .sticky3b {
-  background: white;
-  height: 130vh;
+  background: black;
+  height: 200vh;
 
-  
   .picmymedlogo {
     position: absolute;
     object-fit: cover;
-    width:200px;
-    height:200px;
-    top:20%;
-    left: 10.5%;
-    z-index:20;
+    width: 200px;
+    height: 200px;
+    top: 12%;
+    left: 7.5%;
+    z-index: 20;
   }
   .picmymedtitle {
     position: absolute;
-    top: 45%;
-    left: 10.5%;
+    top: 28%;
+    left: 7.5%;
     font-size: 2em;
     font-weight: 800;
-    color:white;
+    color: white;
     transform: translateY(50%);
   }
 
-  .picmymeddes{
+  .picmymeddes {
     position: absolute;
     color: white;
     text-align: left;
     width: 20vw;
-    top: 55%;
-    left: 10.5%;
+    top: 35%;
+    left: 7.5%;
+    opacity: 0.5;
   }
 
-  .picmymedlogo2 {
+  .picmymedlink {
+    color: #fff;
+    font-size: 1.3em;
+    //animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0px 0px 200px #fff, 0px 0px 150px #fff, 0px 0px 60px #fff,
+      0px 0px 30px #fff;
+  }
+
+  .picmymedlink:hover {
+    animation: glow 0.5s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #192340, 0 0 30px #192340,
+        0 0 40px #192340, 0 0 50px #192340, 0 0 60px #192340, 0 0 70px #192340;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #62c6eb, 0 0 40px #62c6eb,
+        0 0 50px #62c6eb, 0 0 60px #62c6eb, 0 0 70px #62c6eb, 0 0 80px #62c6eb;
+    }
+  }
+
+  .sfologo {
     position: absolute;
-    object-fit: cover;
-    width:200px;
-    height:200px;
-    top:20%;
-    right: 10.5%;
-    z-index:20;
+    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    top: 41%;
+    right: 7.5%;
+    z-index: 20;
   }
 
   .sfotitle {
     position: absolute;
-    top: 45%;
-    right: 10.5%;
+    top: 58%;
+    right: 7.5%;
     text-align: right;
     font-size: 1.8em;
     font-weight: 800;
-    color:white;
+    color: white;
     transform: translateY(50%);
   }
 
-  .sfodes{
+  .sfodes {
     position: absolute;
     color: white;
-    text-align: left;
+    text-align: right;
     width: 20vw;
-    top: 55%;
-    right: 8.5%;
+    top: 65%;
+    right: 7.5%;
   }
-
-
 
   .outter {
-    display: flex;
-    height: 100vh;
-    width: 100wv;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .sun {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(30%, -100%);
-      width: 250px;
-      height: 250px;
-      background: black;
-      box-shadow: 0px 0px 60px #fff, inset 0px 0px 30px #fff; //inset 0px 0px 50px #fff;
-      border-radius: 50%;
-      animation: "";
-      //position: fixed;
-      z-index: 10;
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -82%) rotate(45deg);
+    width: 250px;
+    height: 250px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 30px #fff, inset 0px 0px 30px #fff;
+    border-radius: 10%;
+    text-align: center;
+    //position: fixed;
+    z-index: 20;
   }
 
+  .outter:hover {
+    animation: glow1 1.5s ease-in-out infinite alternate;
+  }
+  .text97 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -170%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 50px #fff;
+    font-weight: 900;
+    font-size: 5.5em;
+  }
+  .textkm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 30px #fff;
+    font-size: 3em;
+  }
   .innerCircle {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
-    width: 250px;
-    height: 250px;
-    box-shadow: 0px 0px 60px #feed5b, inset 15px 15px 50px #fffebb,
-      inset 70px 150px 50px #f4d26d, inset 80px 180px 50px #d7944e,
-      inset 600px 400px 50px #c26337;
-    border-radius: 50%;
+    transform: translate(-50%, -90%) rotate(45deg);
+    width: 210px;
+    height: 210px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 20px #feed5b, inset 0px 0px 20px #feed5b;
+    border-radius: 7%;
     text-align: center;
-    //position: fixed;
     z-index: 1;
+    //animation: glow1 1s ease-in-out infinite alternate;
   }
+
+  @keyframes glow1 {
+    0% {
+      filter: drop-shadow(0px 0px 30px #fff) drop-shadow(0px 0px 30px #fff);
+    }
+    20% {
+      filter: drop-shadow(0px 0px 30px orange) drop-shadow(0px 0px 30px orange);
+    }
+    40% {
+      filter: drop-shadow(0px 0px 30px red) drop-shadow(0px 0px 30px red);
+    }
+    60% {
+      filter: drop-shadow(0px 0px 30px green) drop-shadow(0px 0px 30px green);
+    }
+    80% {
+      filter: drop-shadow(0px 0px 30px purple) drop-shadow(0px 0px 30px purple);
+    }
+    100% {
+      filter: drop-shadow(0px 0px 30px #fff) drop-shadow(0px 0px 30px yellow);
+    }
+  }
+  // .innerCircle {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -88%);
+  //   width: 0;
+  //   height: 0;
+  //   border-style: solid;
+  //   border-width: 0 125px 250px 125px;
+  //   border-color: transparent transparent #007bff transparent;
+  //   box-shadow: 0px 0px 60px #feed5b, inset 15px 15px 50px #fffebb,
+  //     inset 70px 150px 50px #f4d26d, inset 80px 180px 50px #d7944e,
+  //     inset 600px 400px 50px #c26337;
+  //   //border-radius: 50%;
+  //   text-align: center;
+  //   //position: fixed;
+  //   z-index: 1;
+  // }
 }
+
+//0px 0px 60px #3180B9, 20px 20px 30px #234368, -20px -20px 30px #234368, -20px -20px 30px #3180B9,-20px 20px 30px #234368,20px -20px 30px #234368; //, inset -25px 5px 15px #3180B9, inset -25px 8px 50px #234368, inset -80px 40px 70px #192441, inset -40px 80px 90px #3180B9, inset -50px 200px 80px #192441, inset 100px 100px 100px #192441, inset -100px -100px 80px #234368;
 
 .sticky3a {
   background: white;
+  z-index: 5;
 
   &.lineimg {
     position: absolute;
     top: 30%;
     height: 300px;
-    width: 7000px;
-    transform: translateX(-80%) rotate(-1deg);
-    background: url(/dist/img/Grid1.png);
+    width: 3000vw;
+    transform: translate(-80%, 30%) rotate(0deg);
+    background: url(../img/Grid1.png);
     font-size: 15em;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 0;
   }
   &.more {
     position: relative;
     font-weight: 900;
     font-size: 230px;
-    width: 5000px;
+    width: 6000px;
     background: transparent;
-    transform: translate(5%, 45%) rotate(-2deg);
+    transform: translate(5%, 60%) rotate(0deg);
+    z-index: 0;
   }
   .warning1 {
     position: absolute;
     height: 38px;
     width: 150vw;
     transform: translate(-30%, 1300%) rotate(20deg);
-    background: url(/dist/img/smallWarning.png);
+    background: url(../img/smallWarning.png);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 5;
   }
   .warning2 {
     position: absolute;
     height: 70px;
     width: 150vw;
     transform: translate(-10%, 400%) rotate(-33deg);
-    background: url(/dist/img/largeWarning.png);
+    background: url(../img/largeWarning.png);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     z-index: 0;
   }
@@ -320,30 +415,34 @@ body {
     height: 50px;
     width: 150vw;
     transform: translate(-5%, 600%) rotate(-22deg);
-    background: url(/dist/img/mediumWarning.png);
+    background: url(../img/mediumWarning.png);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
-    z-index: 10;
+    z-index: 3;
   }
   &.githubSign {
     position: absolute;
-    height: 200px;
-    width: 200px;
-    background: url(/dist/img/githubWarning.png);
-    transform: rotate(-2deg);
-    right: 20%;
-    top: 60%;
-    animation: swing ease-in-out 1s infinite alternate;
+    height: 215px;
+    width: 210px;
+    
+    background: url(../img/githubWarning.png);
+    transform: translate(0%, 0%) rotate(-2deg);
+    right: 15%;
+    top: 170%;
+    //animation: swing ease-in-out 1s infinite alternate;
+    border: 0;
+    outline: 0;
   }
 }
 .sticky4 {
   background: white;
   padding: 0;
   overflow: hidden;
-  z-index: -1;
+  height: 100vh;
+  z-index: 1;
 
   .contact1 {
     position: absolute;
-    font-size: 23vmax;
+    font-size: 23.65vmax;
     transform: translateY(70vh);
     text-shadow: 0px -50px rgba(49, 47, 47, 0.55),
       0px -100px rgba(49, 47, 47, 0.5), 0px -150px rgba(49, 47, 47, 0.45),
@@ -360,6 +459,36 @@ body {
       0px -400px rgba(49, 47, 47, 0.15), 0px -450px rgba(49, 47, 47, 0.1),
       0px -500px rgba(49, 47, 47, 0.05), 0px -550px rgba(49, 47, 47, 0.03);
   }
+
+  .emaillink {
+    position: absolute;
+    top: 4%;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .email {
+    font-size: 2em;
+    color: rgba(49, 47, 47, 0.35);
+  }
+  .email:hover {
+    color: rgba(49, 47, 47, 0.95);
+  }
+
+  .footer {
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+    background: rgba(49, 47, 47, 0.25);
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  .footercontent {
+    color: white;
+    font-size: 15px;
+  }
 }
 
 .sticky4a {
@@ -373,7 +502,7 @@ body {
     width: 80%;
     opacity: 0.32;
     transform: translate(-30%, 93%) rotate(79deg);
-    background: url(/dist/img/triangleSign.png);
+    background: url(./img/triangleSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 4;
@@ -384,7 +513,7 @@ body {
     width: 80%;
     opacity: 0.13;
     transform: translate(-30%, 95%) rotate(79deg);
-    background: url(/dist/img/triangleSign.png);
+    background: url(./img/triangleSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 5;
@@ -396,7 +525,7 @@ body {
     width: 100%;
     opacity: 0.11;
     transform: translate(-15%, 55%) rotate(41deg);
-    background: url(/dist/img/stopSign.png);
+    background: url(./img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 3;
@@ -407,7 +536,7 @@ body {
     width: 100%;
     opacity: 0.22;
     transform: translate(-14%, 53%) rotate(41deg);
-    background: url(/dist/img/stopSign.png);
+    background: url(./img/stopSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
@@ -418,7 +547,7 @@ body {
     height: 45%;
     width: 45%;
     transform: translate(30%, 40%) rotate(0deg);
-    background: url(/dist/img/radioactiveSign.png);
+    background: url(./img/radioactiveSign.png);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -2;
@@ -574,3 +703,5 @@ body {
   //border: 3px solid #73AD21;
   width: 300px;
 }
+
+@import "mobile";
