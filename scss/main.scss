@@ -15,6 +15,63 @@ body {
     box-sizing: border-box; //since we have padding box-sizing will not give us uncessary scroll
   }
 }
+//invisible all mobile 
+.mobileLogo{
+  visibility: hidden;
+}
+.mobileContainer1{
+  visibility: hidden;
+}
+.mobileHello{
+  visibility: hidden;
+}
+.mobileIanSeng{
+  visibility: hidden;
+}
+.mobileContainer2{
+  visibility: hidden;
+}
+.mobileAbout{
+  visibility: hidden;
+}
+.mobileMyself{
+  visibility: hidden;
+}
+.mobileMyself2{
+  visibility: hidden;
+}
+.mobileContainer3{
+  visibility: hidden;
+}
+.mobileProject{
+  visibility: hidden;
+}
+.mobilePicmymed{
+  visibility: hidden;
+}
+.mobilePicmymedlogo{
+  visibility: hidden;
+}
+.mobilePicmymedDescription{
+  visibility: hidden;
+}
+.mobileSfom{
+  visibility: hidden;
+}
+.mobileSfologo{
+  visibility: hidden;
+}
+.mobileSfoDescription{
+  visibility: hidden;
+}
+.mobileMoreProject{
+  visibility: hidden;
+}
+.mobileContainer4{
+  visibility: hidden;
+}
+//
+
 .sticky1 {
   background: white;
   height: 160vh;
@@ -188,7 +245,7 @@ body {
 
 .sticky3b {
   background: black;
-  height: 200vh;
+  height: 160vh;
 
   .picmymedlogo {
     position: absolute;
@@ -377,7 +434,7 @@ body {
     top: 30%;
     height: 300px;
     width: 3000vw;
-    transform: translate(-80%, 30%) rotate(0deg);
+    transform: translate(-80%, 130%) rotate(0deg);
     background: url(../img/Grid1.png);
     font-size: 15em;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
@@ -389,14 +446,14 @@ body {
     font-size: 230px;
     width: 6000px;
     background: transparent;
-    transform: translate(5%, 60%) rotate(0deg);
+    transform: translate(5%, 150%) rotate(0deg);
     z-index: 0;
   }
   .warning1 {
     position: absolute;
     height: 38px;
     width: 150vw;
-    transform: translate(-30%, 1300%) rotate(20deg);
+    transform: translate(-30%, 1800%) rotate(20deg);
     background: url(../img/smallWarning.png);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
     z-index: 5;
@@ -405,7 +462,7 @@ body {
     position: absolute;
     height: 70px;
     width: 150vw;
-    transform: translate(-10%, 400%) rotate(-33deg);
+    transform: translate(-10%, 600%) rotate(-33deg);
     background: url(../img/largeWarning.png);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     z-index: 0;
@@ -414,7 +471,7 @@ body {
     position: absolute;
     height: 50px;
     width: 150vw;
-    transform: translate(-5%, 600%) rotate(-22deg);
+    transform: translate(-5%, 1000%) rotate(-22deg);
     background: url(../img/mediumWarning.png);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
     z-index: 3;
@@ -423,12 +480,11 @@ body {
     position: absolute;
     height: 215px;
     width: 210px;
-    
     background: url(../img/githubWarning.png);
-    transform: translate(0%, 0%) rotate(-2deg);
-    right: 15%;
-    top: 170%;
-    //animation: swing ease-in-out 1s infinite alternate;
+    transform: translate(0%, 20%) rotate(-2deg);
+    right: 5%;
+    top: 215%;
+    animation: swing ease-in-out 1s infinite alternate;
     border: 0;
     outline: 0;
   }

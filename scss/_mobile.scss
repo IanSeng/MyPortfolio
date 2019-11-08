@@ -13,10 +13,15 @@
 // Tablets & Small Laptops
 @include mediaMd {
   .mobileLogo{
+    visibility: visible;
     position: fixed;
     top: 3%;
-    left: 5%;
+    left: 7%;
+    font-size: 1.3em;
     z-index: 20;
+    color:white;
+    mix-blend-mode: difference;
+    text-decoration: none;
   }
   .sticky1 {
     background: white;
@@ -39,6 +44,7 @@
     }
 
     .mobileContainer1 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: yellow;
@@ -48,20 +54,24 @@
       transform: translate(-50%, -50%);
     }
     .mobileHello {
+      visibility: visible;
       font-size: 5em;
     }
     .mobileIanSeng {
+      visibility: visible;
       position: absolute;
       font-size: 3.5em;
     }
   }
 
   .sticky2 {
+    
     background: white;
     height: 100vh;
 
     //Moble About
     .mobileContainer2 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: red;
@@ -71,21 +81,25 @@
       transform: translate(-50%, -50%);
     }
     .mobileAbout {
+      visibility: visible;
       font-size: 5em;
     }
 
     .mobileMyself {
+      visibility: visible;
       width: 80vw;
       font-size: 1.8em;
       padding-bottom: 30px;
     }
 
     .mobileMyself2 {
+      visibility: visible;
       position: absolute;
       width: 80vw;
       font-size: 1.3em;
     }
     .about-header {
+      visibility: visible;
       visibility: hidden;
     }
 
@@ -135,6 +149,7 @@
     height: 210vh;
 
     .mobileContainer3 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: blue;
@@ -144,27 +159,32 @@
       transform: translate(-50%, -50%);
     }
     .mobileProject {
+      visibility: visible;
       font-size: 5em;
     }
 
     .mobilePicmymed {
+      visibility: visible;
       font-size: 1.5em;
       width: 80vw;
       padding-top: 50px;
       color: #fff;
     }
     .mobilePicmymedlogo {
+      visibility: visible;
       object-fit: cover;
       width: 30vw;
       height: 30vw;
     }
     .mobilePicmymedDescription {
+      visibility: visible;
       font-size: 1.3em;
       width: 80vw;
       color: #fff;
     
     }
     .picmymedlink {
+      visibility: visible;
       color:white;
       animation: glow 1.5s ease-in-out infinite alternate;
     }
@@ -179,6 +199,7 @@
       }
     }
     .mobileSfom {
+      visibility: visible;
       font-size: 1.5em;
       width: 80vw;
       padding-top: 160px;
@@ -186,17 +207,20 @@
     }
 
     .mobileSfologo {
+      visibility: visible;
       object-fit: cover;
       width: 35vw;
       height: 30vw;
     }
 
     .mobileSfoDescription {
+      visibility: visible;
       font-size: 1.3em;
       width: 80vw;
       color: #fff;
     }
     .mobileMoreProject {
+      visibility: visible;
       font-size: 2.8em;
       width: 100vw;
       padding-top: 100px;
@@ -243,6 +267,7 @@
   .sticky4 {
     height: 90vh;
     .mobileContainer4 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: #83b8bb;
@@ -252,20 +277,24 @@
       transform: translate(-50%, -50%);
     }
     .mobileContact {
+      visibility: visible;
       font-size: 5em;
       padding-bottom: 30px;
     }
     .mobilebox {
+      visibility: visible;
       font-size: 1.5em;
     }
 
     .mobileContactBox {
+      visibility: visible;
       position: parallel;
       width: 80vw;
       height: 98px;
       //background: red;
     }
     .fa {
+      visibility: visible;
       padding-top: 35px;
       font-size: 30px;
       height: 63px;
@@ -275,29 +304,35 @@
       //margin: 5px 2px;
     }
     .fa:hover {
+      visibility: visible;
       opacity: 0.7;
     }
     .fa-envelope {
+      visibility: visible;
       background: #f5dd91;
       color: white;
     }
 
     .fa-github {
+      visibility: visible;
       background: #f68e5f;
       color: white;
     }
 
     .fa-codepen {
+      visibility: visible;
       background: #f86c5e;
       color: white;
     }
 
     .fa-facebook {
+      visibility: visible;
       background: #3b5998;
       color: white;
     }
 
     .mobileFooter {
+      visibility: visible;
       height: 50px;
       width: 80vw;
       //background: red;
@@ -312,6 +347,9 @@
       visibility: hidden;
     }
     .footer {
+      visibility: hidden;
+    }
+    .emaillink{
       visibility: hidden;
     }
   }

@@ -200,8 +200,8 @@ tlContact2
 //tlAbout2.to(".sun", 2,{x:200, y:-250, scale:1});
 tlProject3
   .from("#lineimg", 1, { x: -1000 })
-  .to("#sticky3amore", 2, { x: -3100 }, 0)
-  .from("#githubSign", 1, { x: 500 });
+  .to("#sticky3amore", 1, { x: -3100 }, 0);
+  //.from("#githubSign", 0.5, { x: 500 });
 
 //to("#sticky3amore", 2, { x: -800},0);
 //-------------scene-----------------

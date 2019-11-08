@@ -81,6 +81,60 @@ body {
     position: relative;
     box-sizing: border-box; }
 
+.mobileLogo {
+  visibility: hidden; }
+
+.mobileContainer1 {
+  visibility: hidden; }
+
+.mobileHello {
+  visibility: hidden; }
+
+.mobileIanSeng {
+  visibility: hidden; }
+
+.mobileContainer2 {
+  visibility: hidden; }
+
+.mobileAbout {
+  visibility: hidden; }
+
+.mobileMyself {
+  visibility: hidden; }
+
+.mobileMyself2 {
+  visibility: hidden; }
+
+.mobileContainer3 {
+  visibility: hidden; }
+
+.mobileProject {
+  visibility: hidden; }
+
+.mobilePicmymed {
+  visibility: hidden; }
+
+.mobilePicmymedlogo {
+  visibility: hidden; }
+
+.mobilePicmymedDescription {
+  visibility: hidden; }
+
+.mobileSfom {
+  visibility: hidden; }
+
+.mobileSfologo {
+  visibility: hidden; }
+
+.mobileSfoDescription {
+  visibility: hidden; }
+
+.mobileMoreProject {
+  visibility: hidden; }
+
+.mobileContainer4 {
+  visibility: hidden; }
+
 .sticky1 {
   background: white;
   height: 160vh; }
@@ -212,7 +266,7 @@ body {
 
 .sticky3b {
   background: black;
-  height: 200vh; }
+  height: 160vh; }
   .sticky3b .picmymedlogo {
     position: absolute;
     object-fit: cover;
@@ -341,7 +395,7 @@ body {
     top: 30%;
     height: 300px;
     width: 3000vw;
-    transform: translate(-80%, 30%) rotate(0deg);
+    transform: translate(-80%, 130%) rotate(0deg);
     background: url(../img/Grid1.png);
     font-size: 15em;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
@@ -352,13 +406,13 @@ body {
     font-size: 230px;
     width: 6000px;
     background: transparent;
-    transform: translate(5%, 60%) rotate(0deg);
+    transform: translate(5%, 150%) rotate(0deg);
     z-index: 0; }
   .sticky3a .warning1 {
     position: absolute;
     height: 38px;
     width: 150vw;
-    transform: translate(-30%, 1300%) rotate(20deg);
+    transform: translate(-30%, 1800%) rotate(20deg);
     background: url(../img/smallWarning.png);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
     z-index: 5; }
@@ -366,7 +420,7 @@ body {
     position: absolute;
     height: 70px;
     width: 150vw;
-    transform: translate(-10%, 400%) rotate(-33deg);
+    transform: translate(-10%, 600%) rotate(-33deg);
     background: url(../img/largeWarning.png);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     z-index: 0; }
@@ -374,7 +428,7 @@ body {
     position: absolute;
     height: 50px;
     width: 150vw;
-    transform: translate(-5%, 600%) rotate(-22deg);
+    transform: translate(-5%, 1000%) rotate(-22deg);
     background: url(../img/mediumWarning.png);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.75);
     z-index: 3; }
@@ -383,9 +437,10 @@ body {
     height: 215px;
     width: 210px;
     background: url(../img/githubWarning.png);
-    transform: translate(0%, 0%) rotate(-2deg);
-    right: 15%;
-    top: 170%;
+    transform: translate(0%, 20%) rotate(-2deg);
+    right: 5%;
+    top: 215%;
+    animation: swing ease-in-out 1s infinite alternate;
     border: 0;
     outline: 0; }
 
@@ -600,10 +655,15 @@ body {
 
 @media screen and (max-width: 768px) {
   .mobileLogo {
+    visibility: visible;
     position: fixed;
     top: 3%;
-    left: 5%;
-    z-index: 20; }
+    left: 7%;
+    font-size: 1.3em;
+    z-index: 20;
+    color: white;
+    mix-blend-mode: difference;
+    text-decoration: none; }
   .sticky1 {
     background: white;
     height: 100vh; }
@@ -618,6 +678,7 @@ body {
     .sticky1 .a {
       visibility: hidden; }
     .sticky1 .mobileContainer1 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: yellow;
@@ -626,14 +687,17 @@ body {
       left: 20%;
       transform: translate(-50%, -50%); }
     .sticky1 .mobileHello {
+      visibility: visible;
       font-size: 5em; }
     .sticky1 .mobileIanSeng {
+      visibility: visible;
       position: absolute;
       font-size: 3.5em; }
   .sticky2 {
     background: white;
     height: 100vh; }
     .sticky2 .mobileContainer2 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: red;
@@ -642,16 +706,20 @@ body {
       left: 20%;
       transform: translate(-50%, -50%); }
     .sticky2 .mobileAbout {
+      visibility: visible;
       font-size: 5em; }
     .sticky2 .mobileMyself {
+      visibility: visible;
       width: 80vw;
       font-size: 1.8em;
       padding-bottom: 30px; }
     .sticky2 .mobileMyself2 {
+      visibility: visible;
       position: absolute;
       width: 80vw;
       font-size: 1.3em; }
     .sticky2 .about-header {
+      visibility: visible;
       visibility: hidden; }
     .sticky2 .about-myself {
       visibility: hidden;
@@ -685,6 +753,7 @@ body {
     background: black;
     height: 210vh; }
     .sticky3 .mobileContainer3 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: blue;
@@ -693,21 +762,26 @@ body {
       left: 20%;
       transform: translate(-50%, -50%); }
     .sticky3 .mobileProject {
+      visibility: visible;
       font-size: 5em; }
     .sticky3 .mobilePicmymed {
+      visibility: visible;
       font-size: 1.5em;
       width: 80vw;
       padding-top: 50px;
       color: #fff; }
     .sticky3 .mobilePicmymedlogo {
+      visibility: visible;
       object-fit: cover;
       width: 30vw;
       height: 30vw; }
     .sticky3 .mobilePicmymedDescription {
+      visibility: visible;
       font-size: 1.3em;
       width: 80vw;
       color: #fff; }
     .sticky3 .picmymedlink {
+      visibility: visible;
       color: white;
       animation: glow 1.5s ease-in-out infinite alternate; }
   @-webkit-keyframes glow {
@@ -716,19 +790,23 @@ body {
     to {
       text-shadow: 0 0 10px #fff, 0 0 10px #62c6eb, 0 0 20px #62c6eb, 0 0 10px blue, 0 0 20px blue, 0 0 10px #62c6eb, 0 0 10px #62c6eb; } }
     .sticky3 .mobileSfom {
+      visibility: visible;
       font-size: 1.5em;
       width: 80vw;
       padding-top: 160px;
       color: #fff; }
     .sticky3 .mobileSfologo {
+      visibility: visible;
       object-fit: cover;
       width: 35vw;
       height: 30vw; }
     .sticky3 .mobileSfoDescription {
+      visibility: visible;
       font-size: 1.3em;
       width: 80vw;
       color: #fff; }
     .sticky3 .mobileMoreProject {
+      visibility: visible;
       font-size: 2.8em;
       width: 100vw;
       padding-top: 100px;
@@ -759,6 +837,7 @@ body {
   .sticky4 {
     height: 90vh; }
     .sticky4 .mobileContainer4 {
+      visibility: visible;
       width: 98px;
       height: 98px;
       background: #83b8bb;
@@ -767,15 +846,19 @@ body {
       left: 20%;
       transform: translate(-50%, -50%); }
     .sticky4 .mobileContact {
+      visibility: visible;
       font-size: 5em;
       padding-bottom: 30px; }
     .sticky4 .mobilebox {
+      visibility: visible;
       font-size: 1.5em; }
     .sticky4 .mobileContactBox {
+      visibility: visible;
       position: parallel;
       width: 80vw;
       height: 98px; }
     .sticky4 .fa {
+      visibility: visible;
       padding-top: 35px;
       font-size: 30px;
       height: 63px;
@@ -783,20 +866,26 @@ body {
       text-align: center;
       text-decoration: none; }
     .sticky4 .fa:hover {
+      visibility: visible;
       opacity: 0.7; }
     .sticky4 .fa-envelope {
+      visibility: visible;
       background: #f5dd91;
       color: white; }
     .sticky4 .fa-github {
+      visibility: visible;
       background: #f68e5f;
       color: white; }
     .sticky4 .fa-codepen {
+      visibility: visible;
       background: #f86c5e;
       color: white; }
     .sticky4 .fa-facebook {
+      visibility: visible;
       background: #3b5998;
       color: white; }
     .sticky4 .mobileFooter {
+      visibility: visible;
       height: 50px;
       width: 80vw;
       text-align: center;
@@ -806,6 +895,8 @@ body {
     .sticky4 .contactc {
       visibility: hidden; }
     .sticky4 .footer {
+      visibility: hidden; }
+    .sticky4 .emaillink {
       visibility: hidden; } }
 
 @media screen and (max-width: 500px) {
