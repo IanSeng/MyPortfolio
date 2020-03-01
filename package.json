@@ -26,5 +26,9 @@
     "rimraf": "^3.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "node-fetch": "^2.6.0"
   }
 }
