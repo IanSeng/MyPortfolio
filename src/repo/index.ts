@@ -1,18 +1,18 @@
-class Repo {
-    name: String;
-    languages: Array<string>;
-    url: String;
-    constructor(name: String, languages: Array<string>, url: String ){
+export class Repo {
+    public name: String;
+    public url: String;
+    public languages: Array<any>;
+
+    constructor(name: String, url: String, languages: Array<any>) {
         this.name = name;
-        this.languages = languages;
         this.url = url;
+        this.languages = languages;
     }
 
-    toString(){
-        return  `Repo - ${this.name}
-                 languages used: ${this.languages}
-                 url: ${this.url}`
+    toString() {
+        return `
+        Repo          : ${this.name}
+        languages used: ${this.languages}
+        url           : ${this.url}`
     }
 }
-
-export = Repo;
