@@ -1,3 +1,3 @@
-const GITHUB_USERNAME = 'tlafranc';
+const GITHUB_USERNAME = 'IanSeng';
 
 export default GITHUB_USERNAME;
