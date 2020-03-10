@@ -9,17 +9,17 @@ module GithubServices {
 
 
     export async function getUserRepos() {
-        const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos&access_token=69a7267d04e9b472670179f25d894af07ef00e55`
+        const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos`
         const response = await fetch(url)
         const result = await response.json()
 
-        Object.keys(result).forEach(async key => {
-            const repoLan: any = (await getRepoLanguages(result[key].name))
-            repos.push(result[key].name, result[key].html_url, repoLan)
+        // Object.keys(result).forEach(async key => {
+        //     const repoLan: any = (await getRepoLanguages(result[key].name))
+        //     repos.push(result[key].name, result[key].html_url, repoLan)
 
-        });
+        // });
 
-        return repos
+        return result
 
     }
 
