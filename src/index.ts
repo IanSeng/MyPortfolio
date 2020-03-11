@@ -6,7 +6,7 @@ async function hello() {
     //let repos: Repo[] = [] 
 
     const userRepoData = await GithubServices.getUserRepos();
-    console.log(userRepoData)
+    console.log(JSON.stringify(userRepoData))
 
     // userRepoData.forEach(async element => {
     //     let y = await GithubServices.getRepoLanguages(element.name);
