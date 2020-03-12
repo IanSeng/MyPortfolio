@@ -1,13 +1,13 @@
 import { GithubServices } from "./services/github-services"
 import { Repo } from "./repo";
-import * as data from "./data.json";
+import {default as data} from "./data.json";
 
 async function hello() {
     //let repos: Repo[] = [] 
 
-    //const userRepoData = await GithubServices.getUserRepos();
-    //console.log(JSON.stringify(userRepoData))
-    
+    // const userRepoData = await GithubServices.getUserRepos();
+    // console.log(JSON.stringify(userRepoData))
+
     // userRepoData.forEach(async element => {
     //     let y = await GithubServices.getRepoLanguages(element.name);
     //     //console.log(await GithubServices.getRepoLanguages(element.name))
@@ -18,12 +18,15 @@ async function hello() {
     // let x = new Repo('heh',"ee",["ee"])
 
     //repos.push(x)
-     //repos.push(new Repo('hewwrh',"ee",["ee"]))
-     //repos.push(new Repo('wok-FeelsBook',"https://github.com/IanSeng/wok-FeelsBoo",["java"]))
+    //repos.push(new Repo('hewwrh',"ee",["ee"]))
+    //repos.push(new Repo('wok-FeelsBook',"https://github.com/IanSeng/wok-FeelsBoo",["java"]))
     //console.log(repos)
-   data.forEach(element => {
-       console.log(element.name)
-   })
+    
+    data.forEach( element => {
+        console.log(element.name)
+    })
+    //console.log(data[0])
+
 
 
 }
