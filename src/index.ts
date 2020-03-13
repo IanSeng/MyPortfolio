@@ -21,11 +21,11 @@ async function hello() {
     //repos.push(new Repo('hewwrh',"ee",["ee"]))
     //repos.push(new Repo('wok-FeelsBook',"https://github.com/IanSeng/wok-FeelsBoo",["java"]))
     //console.log(repos)
-    
+    let repoName : any[] = []
     data.forEach( element => {
-        console.log(element.name)
+        repoName.push(element.name)
     })
-    //console.log(data[0])
+    console.log(repoName)
 
 
 
