@@ -1,6 +1,6 @@
 import { GithubServices } from "./services/github-services"
 import { Repo } from "./repo";
-import {default as data} from "./data.json";
+import { default as data } from "./data.json";
 
 async function hello() {
     //let repos: Repo[] = [] 
@@ -21,11 +21,25 @@ async function hello() {
     //repos.push(new Repo('hewwrh',"ee",["ee"]))
     //repos.push(new Repo('wok-FeelsBook',"https://github.com/IanSeng/wok-FeelsBoo",["java"]))
     //console.log(repos)
-    let repoName : any[] = []
-    data.forEach( element => {
-        repoName.push(element.name)
+    let repoNameList: any[] = []
+    let repoLanguage: any[] = []
+    data.forEach(element => {
+        repoNameList.push(element.name)
     })
-    console.log(repoName)
+    
+    // repoNameList.forEach(async element => {
+    //     let y = await GithubServices.getRepoLanguages("element.name");
+    //     //console.log(await GithubServices.getRepoLanguages(element.name))
+    //     //console.log(y)
+    //     repoLanguage.push(y)
+    //     console.log(repoLanguage)
+    // })
+    let y = await GithubServices.getRepoLanguages("blockchain");
+        //console.log(await GithubServices.getRepoLanguages(element.name))
+        //console.log(y)
+        repoLanguage.push(y)
+        console.log(y)
+
 
 
 
