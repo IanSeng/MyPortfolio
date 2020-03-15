@@ -4,7 +4,6 @@ const fetch = require("node-fetch");
 
 module GithubServices {
     let userRepoList: Array<any> = [];
-    let repoLanguages: Array<any> = [];
     let repos: Repo[] = []
 
 
@@ -27,6 +26,7 @@ module GithubServices {
         const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}/languages`
         const response = await fetch(url)
         const result = await response.json()
+        let repoLanguages: Array<any> = [];
         //console.log(result)
 
         Object.keys(result).forEach(key => {

@@ -26,12 +26,18 @@ async function hello() {
     data.forEach(element => {
         repoNameList.push(element.name)
     })
-    console.log(repoNameList)
-    repoNameList.forEach(async element => {
-        //let y = await GithubServices.getRepoLanguages(element);
-        //repoLanguage.push([element,y])
+
+    await Promise.all(repoNameList.map(async (element) => {
+        const contents = await GithubServices.getRepoLanguages(element);
         console.log(element)
-    })
+        console.log(contents)
+      }));
+    // console.log(repoNameList)
+    // repoNameList.forEach(async element => {
+    //     let y = await GithubServices.getRepoLanguages(element);
+    //     //repoLanguage.push([element,y])
+    //     console.log(element)
+    // })
     
     //let y = await GithubServices.getRepoLanguages("blockchain");
         //console.log(await GithubServices.getRepoLanguages(element.name))
