@@ -1,140 +1,108 @@
 [
     {
-        "name": "cmput401class2",
-        "url": "https://github.com/IanSeng/cmput401class2",
-        "languages": []
-    },
-    {
-        "name": "my-portfolio",
-        "url": "https://github.com/IanSeng/my-portfolio",
-        "languages": [
-            "TypeScript"
+        "kind": "calendar#event",
+        "etag": "\"3170713355194000\"",
+        "id": "3f1kcbmvjicdl2eb8jgc93s6ld",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=M2Yxa2NibXZqaWNkbDJlYjhqZ2M5M3M2bGQgaWFuLmRldjI3QG0",
+        "created": "2020-03-19T00:22:59.000Z",
+        "updated": "2020-03-28T00:51:17.597Z",
+        "summary": "testing",
+        "description": "testing description ",
+        "location": "International House",
+        "creator": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "organizer": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "start": {
+            "dateTime": "2020-04-01T18:30:00-04:00"
+        },
+        "end": {
+            "dateTime": "2020-04-01T19:30:00-04:00"
+        },
+        "iCalUID": "3f1kcbmvjicdl2eb8jgc93s6ld@google.com",
+        "sequence": 5,
+        "attachments": [
+            {
+                "fileUrl": "https://drive.google.com/file/d/1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ/view?usp=drive_web",
+                "title": "Cute_dog.jpg",
+                "iconLink": "https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png",
+                "fileId": "1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ"
+            }
         ]
     },
     {
-        "name": "lonelyTwitter",
-        "url": "https://github.com/IanSeng/lonelyTwitter",
-        "languages": [
-            "Java"
+        "kind": "calendar#event",
+        "etag": "\"3170704647598000\"",
+        "id": "13p1of8qctn5aqlt5r5trjh09r",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=MTNwMW9mOHFjdG41YXFsdDVyNXRyamgwOXIgaWFuLmRldjI3QG0",
+        "created": "2020-03-27T23:38:41.000Z",
+        "updated": "2020-03-27T23:38:43.799Z",
+        "summary": "testing-2",
+        "description": "testing description",
+        "creator": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "organizer": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "start": {
+            "dateTime": "2020-04-01T19:30:00-04:00"
+        },
+        "end": {
+            "dateTime": "2020-04-01T20:30:00-04:00"
+        },
+        "iCalUID": "13p1of8qctn5aqlt5r5trjh09r@google.com",
+        "sequence": 1,
+        "attachments": [
+            {
+                "fileUrl": "https://drive.google.com/file/d/1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ/view?usp=drive_web",
+                "title": "Cute_dog.jpg",
+                "iconLink": "https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png",
+                "fileId": "1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ"
+            }
         ]
     },
-    {
-        "name": "blockchain",
-        "url": "https://github.com/IanSeng/blockchain",
-        "languages": [
-            "JavaScript"
-        ]
-    },
-    {
-        "name": "machine-learning",
-        "url": "https://github.com/IanSeng/machine-learning",
-        "languages": [
-            "Python",
-            "Shell"
-        ]
-    },
-    {
-        "name": "revents",
-        "url": "https://github.com/IanSeng/revents",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "cmput401hackthon2019",
-        "url": "https://github.com/IanSeng/cmput401hackthon2019",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "SearchForOmen",
-        "url": "https://github.com/IanSeng/SearchForOmen",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "testing",
-        "url": "https://github.com/IanSeng/testing",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "data-visualization",
-        "url": "https://github.com/IanSeng/data-visualization",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "FillerCreepForAndroid",
-        "url": "https://github.com/IanSeng/FillerCreepForAndroid",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "mnist",
-        "url": "https://github.com/IanSeng/mnist",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "sample-repo-lab1",
-        "url": "https://github.com/IanSeng/sample-repo-lab1",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "youtube_video_code",
-        "url": "https://github.com/IanSeng/youtube_video_code",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "PicMyMed",
-        "url": "https://github.com/IanSeng/PicMyMed",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "recipe-book-app",
-        "url": "https://github.com/IanSeng/recipe-book-app",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "wok-FeelsBook",
-        "url": "https://github.com/IanSeng/wok-FeelsBook",
-        "languages": [
-            "message",
-            "documentation_url"
-        ]
-    },
-    {
-        "name": "natural-language-processing",
-        "url": "https://github.com/IanSeng/natural-language-processing",
-        "languages": [
-            "message",
-            "documentation_url"
+{
+        "kind": "calendar#event",
+        "etag": "\"3170704665884000\"",
+        "id": "5gk2fja2jejea13i1adnddnvd5",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NWdrMmZqYTJqZWplYTEzaTFhZG5kZG52ZDUgaWFuLmRldjI3QG0",
+        "created": "2020-03-27T23:38:50.000Z",
+        "updated": "2020-03-27T23:38:52.942Z",
+        "summary": "testing-3",
+        "description": "testing description",
+        "creator": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "organizer": {
+            "email": "ian.dev27@gmail.com",
+            "self": true
+        },
+        "start": {
+            "dateTime": "2020-04-02T18:30:00-04:00"
+        },
+        "end": {
+            "dateTime": "2020-04-02T19:30:00-04:00"
+        },
+        "iCalUID": "5gk2fja2jejea13i1adnddnvd5@google.com",
+        "sequence": 1,
+        "attachments": [
+            {
+                "fileUrl": "https://drive.google.com/file/d/1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ/view?usp=drive_web",
+                "title": "Cute_dog.jpg",
+                "iconLink": "https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png",
+                "fileId": "1_Xbu6aBZ8V5MxYKx6b0afA8q3ODuFpTQ"
+            }
         ]
     }
 ]

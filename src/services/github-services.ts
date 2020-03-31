@@ -53,7 +53,7 @@ module GithubServices {
       if (events.length) {
         console.log('Upcoming 10 events:');
         events.map((event: any, i: any) => {
-          
+          //console.log(event)
           console.log(JSON.stringify(event))
           //const start = event.start.dateTime || event.start.date;
           //console.log(`${start} - ${event.summary}`);
