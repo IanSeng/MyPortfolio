@@ -2,7 +2,7 @@ import GITHUB_USERNAME from "../app/config/config";
 import { Repo } from "../repo";
 const fetch = require("node-fetch");
 const { google } = require('googleapis');
-const calendar = google.calendar({ version: 'v3', auth: "AIzaSyCJodvMWwAO6GUmYimERL3rJOu40GlZAJM" });
+//const calendar = google.calendar({ version: 'v3', auth: "APIKEY" });
 
 module GithubServices {
   let userRepoList: Array<any> = [];
