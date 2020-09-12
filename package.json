@@ -31,6 +31,6 @@
     "@ng-bootstrap/ng-bootstrap": "^6.0.0",
     "axios": "^0.19.2",
     "googleapis": "^48.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
